@@ -63,14 +63,6 @@ p{
     font-size: 18px;
 }
 
-a{
-    font-size: 20px;
-}
-
-article{
-    font-size: 20px;
-}
-
 button{
     padding: 20px 76px;
     font-size: 20px;
@@ -82,5 +74,6 @@ button{
 
 body{
     font-family: var(--brandFont-L);
+    font-size: 20px;
 }
 
