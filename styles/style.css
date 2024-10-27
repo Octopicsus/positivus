@@ -141,12 +141,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     width: var(--mainWrapper-width);
 }
 
 .brand__message h1{
     width: 532px;
     margin-bottom: 36px;
+}
+
+.brand__message__descr img{
+    display: none;
 }
 
 .brand__message section{
