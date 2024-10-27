@@ -30,6 +30,7 @@
     --brandFont-R:'Space Gratesk R';
 
     --brandColor-Black: rgb(25, 26, 35);
+    --brandColor-Black--hover: rgb(25, 26, 35);
     --brandColor-DarkGrey: rgb(41, 42, 50);
     --brandColor-LightGrey: rgb(243, 243, 243);
     --brandColor-Green: rgb(185, 255, 102);
@@ -70,6 +71,10 @@ button{
     border: none;
     border-radius: 14px;
     background-color: var(--brandColor-Black);
+}
+
+button:hover{
+    background-color: var(--brandColor-DarkGrey);
 }
 
 body{
