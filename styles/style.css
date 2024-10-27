@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Space Gratesk L';
+    src: url('/fonts/SpaceGrotesk-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Space Gratesk R';
+    src: url('/fonts/SpaceGrotesk-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Space Gratesk M';
+    src: url('/fonts/SpaceGrotesk-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Space Gratesk SB';
+    src: url('/fonts/SpaceGrotesk-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Space Gratesk B';
+    src: url('/fonts/SpaceGrotesk-Bold.ttf');
+}
+
+
+:root{
+
+    --brandFont-L:'Space Gratesk L';
+    --brandFont-R:'Space Gratesk R';
+
+    --brandColor-Black: rgb(25, 26, 35);
+    --brandColor-DarkGrey: rgb(41, 42, 50);
+    --brandColor-LightGrey: rgb(243, 243, 243);
+    --brandColor-Green: rgb(185, 255, 102);
+
+    --mainWrapper-width: 1234px;
+
+}
+
+
+
+
+
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+p{
+    font-size: 18px;
+}
+
+a{
+    font-size: 20px;
+}
+
+article{
+    font-size: 20px;
+}
+
+button{
+    padding: 20px 76px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    background-color: var(--brandColor-Black);
+}
+
+body{
+    font-family: var(--brandFont-L);
+}
+
