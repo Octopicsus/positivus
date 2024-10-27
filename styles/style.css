@@ -38,6 +38,7 @@
 
     --mainWrapper-width: 1234px;
 
+
 }
 
 
@@ -103,20 +104,20 @@ header {
     width: var(--mainWrapper-width);
 }
 
-.header__menu{
+.header__menu {
     display: flex;
     align-items: baseline;
     gap: 40px;
 }
 
-.header__menu a{
+.header__menu a {
     text-decoration: none;
     color: var(--brandColor-Black);
 }
 
-.header__menu li:hover{
+.header__menu li:hover {
     background-color: var(--brandColor-Green);
-    
+
 }
 
 .header__menu li:last-child {
@@ -126,18 +127,18 @@ header {
     cursor: pointer;
 }
 
-.header__menu li:last-child:hover{
+.header__menu li:last-child:hover {
     background-color: white;
 }
 
-.brand__message{
+.brand__message {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 70px 0;
 }
 
-.brand__message__wrapper{
+.brand__message__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -145,28 +146,28 @@ header {
     width: var(--mainWrapper-width);
 }
 
-.brand__message h1{
+.brand__message h1 {
     width: 532px;
     margin-bottom: 36px;
 }
 
-.brand__message__descr img{
+.hello__Illustration__01 {
     display: none;
 }
 
-.brand__message section{
+.brand__message section {
     width: 498px;
     line-height: 30px;
     margin-bottom: 36px;
 }
 
-.partners{
+.partners {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.partners__wrapper{
+.partners__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -180,3 +181,127 @@ header {
 
 
 
+
+
+
+
+@media (max-width: 1234px) {
+
+    :root {
+        --mainWrapper-width: 100%;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+    }
+
+    .partners__wrapper {
+        /* display: none; */
+        gap: 32px;
+        overflow: hidden;
+        position: absolute;
+        margin-top: 60px;
+    }
+}
+
+
+@media (max-width: 1184px) {
+
+    .header__menu {
+        display: none;
+    }
+
+    .hello__Illustration__01 {
+        display: block;
+        width: 80%;
+    }
+
+    .hello__Illustration__02 {
+        display: none;
+    }
+
+    .brand__message h1 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 808px) {
+
+    header{
+        margin-top: 10px;
+    }
+
+    .header__wrapper img{
+        width: 38%;
+    }
+
+    .hello__Illustration__01 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        font-size: 40px;
+        line-height: 58px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    .brand__message {
+        padding: 50px 0;
+    }
+
+    .brand__message__descr section{
+        margin-top: 20px;
+        width: 100%;
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .brand__message {
+        padding: 30px 0;
+    }
+
+    .brand__message__wrapper{
+        justify-content: center;
+    }
+
+    .brand__message__descr{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 432px){
+    body{
+        width: 430px;
+    }
+}
