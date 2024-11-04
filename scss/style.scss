@@ -22,6 +22,11 @@ $mainWrapper-width-mobile: 100%;
     align-items    : center;
 }
 
+@mixin flex-space-between {
+    display        : flex;
+    justify-content: space-between;
+}
+
 
 
 
@@ -48,7 +53,9 @@ h4 {
 }
 
 p {
-    font-size: 18px;
+    font-size  : 18px;
+    font-family: $brandFont-R;
+    line-height: 130%;
 }
 
 body {
@@ -58,6 +65,7 @@ body {
 
 button {
     padding         : 20px 76px;
+    font-family     : $brandFont-R;
     font-size       : 20px;
     color           : white;
     border          : none;
@@ -76,11 +84,10 @@ header {
     margin-top: 48px;
 
     .header__wrapper {
-        margin-top     : 12px;
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center;
-        width          : $mainWrapper-width-web;
+        @include flex-space-between;
+        margin-top : 12px;
+        align-items: center;
+        width      : $mainWrapper-width-web;
 
         nav {
             .header__menu {
@@ -96,14 +103,15 @@ header {
                         content         : "";
                         height          : 40px;
                         width           : calc(100% + 28px);
-                        top             : -9px;
+                        top             : -10px;
                         left            : -14px;
                         background-color: $brandColor-Green;
                         position        : absolute;
                         z-index         : -1;
                         border-radius   : 8px;
-                        opacity         : 0;
                         cursor          : pointer;
+                        opacity         : 0;
+                        transition      : .3s;
                     }
 
                     &:hover {
@@ -143,11 +151,10 @@ header {
     padding: 70px 0;
 
     .brand__message__wrapper {
-        display        : flex;
-        justify-content: space-between;
-        align-items    : flex-start;
-        flex-wrap      : wrap;
-        width          : $mainWrapper-width-web;
+        @include flex-space-between;
+        align-items: flex-start;
+        flex-wrap  : wrap;
+        width      : $mainWrapper-width-web;
 
         aside {
             h1 {
@@ -159,8 +166,9 @@ header {
                 display: none;
             }
 
-            section {
+            p {
                 width        : 498px;
+                font-size    : 20px;
                 line-height  : 30px;
                 margin-bottom: 36px;
             }
@@ -170,18 +178,134 @@ header {
 
 
 .partners {
-    @include flex-center();
-    margin-top: 70px;
+    @include flex-center;
+    margin-top   : 40px;
     margin-bottom: 140px;
 
     .partners__wrapper {
-        display        : flex;
-        justify-content: space-between;
-        align-items    : center;
+        @include flex-space-between;
+        align-items: center;
+        width      : $mainWrapper-width-web;
+
+        img {
+            filter: grayscale(1);
+        }
+    }
+}
+
+
+.services {
+    @include flex-center;
+
+    .services__wrapper {
         width: $mainWrapper-width-web;
 
-        img{
-            filter: grayscale(1);
+        .services__title {
+            display      : flex;
+            align-items  : center;
+            margin-bottom: 80px;
+
+            h2 {
+                padding         : 8px 12px;
+                border-radius   : 8px;
+                background-color: $brandColor-Green;
+                margin-right    : 40px;
+            }
+
+            p {
+                width: 580px;
+            }
+        }
+
+        .services__cards__wrapper {
+            display   : flex;
+            flex-wrap : wrap;
+            gap       : 27px;
+            margin-bottom: 100px;
+
+            .services__card {
+                width              : 500px;
+                padding            : 50px;
+                background-color   : $brandColor-LightGrey;
+                border             : $brandColor-Black solid 2px;
+                border-radius      : 45px;
+                background-repeat  : no-repeat;
+                background-position: 336px center;
+                background-size    : 210px 170px;
+                box-shadow         : 0px 4px 0px 0px $brandColor-Black;
+
+                h3 {
+                    line-height  : 134%;
+                    margin-bottom: 94px;
+
+                    span {
+                        background-color: $brandColor-Green;
+                        padding         : 0 8px;
+                        border-radius   : 8px;
+                        padding         : 2px 8px;
+                    }
+                }
+
+                section {
+                    display    : flex;
+                    align-items: center;
+
+                    a {
+                        font-size      : 20px;
+                        margin-left    : 16px;
+                        text-decoration: none;
+                        color          : $brandColor-Black;
+                    }
+                }
+
+                &:nth-child(2),
+                &:nth-child(5) {
+                    background-color: $brandColor-Green;
+
+                    h3 {
+                        span {
+                            background-color: white;
+                        }
+                    }
+                }
+
+                &:nth-child(3),
+                &:nth-child(6) {
+                    background-color: $brandColor-Black;
+                }
+
+                &:nth-child(3) {
+                    h3 {
+                        span {
+                            background-color: white;
+                        }
+                    }
+                }
+
+                &:nth-child(1){
+                    background-image: url(/img/card_01_img.png);
+                }
+
+                &:nth-child(2){
+                    background-image: url(/img/card_02_img.png.png);
+                }
+
+                &:nth-child(3){
+                    background-image: url(/img/card_03_img.png.png);
+                }
+
+                &:nth-child(4){
+                    background-image: url(/img/card_04_img.png.png);
+                }
+
+                &:nth-child(5){
+                    background-image: url(/img/card_05_img.png.png);
+                }
+
+                &:nth-child(6){
+                    background-image: url(/img/card_06_img.png.png);
+                }
+            }
         }
     }
 }
