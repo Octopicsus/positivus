@@ -27,6 +27,23 @@ $mainWrapper-width-mobile: 100%;
     justify-content: space-between;
 }
 
+@mixin title-layout {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 80px;
+
+    h2 {
+        padding         : 8px 12px;
+        border-radius   : 8px;
+        background-color: $brandColor-Green;
+        margin-right    : 40px;
+    }
+
+    p {
+        width: 580px;
+    }
+}
+
 
 
 
@@ -196,41 +213,28 @@ header {
 
 .services {
     @include flex-center;
+    margin-bottom: 140px;
 
     .services__wrapper {
         width: $mainWrapper-width-web;
 
         .services__title {
-            display      : flex;
-            align-items  : center;
-            margin-bottom: 80px;
-
-            h2 {
-                padding         : 8px 12px;
-                border-radius   : 8px;
-                background-color: $brandColor-Green;
-                margin-right    : 40px;
-            }
-
-            p {
-                width: 580px;
-            }
+            @include title-layout;
         }
 
         .services__cards__wrapper {
-            display   : flex;
-            flex-wrap : wrap;
-            gap       : 27px;
-            margin-bottom: 100px;
+            display              : grid;
+            grid-template-columns: 1fr 1fr;
+            gap                  : 40px;
+            margin-bottom        : 100px;
 
             .services__card {
-                width              : 500px;
                 padding            : 50px;
                 background-color   : $brandColor-LightGrey;
                 border             : $brandColor-Black solid 2px;
                 border-radius      : 45px;
                 background-repeat  : no-repeat;
-                background-position: 336px center;
+                background-position: 88% center;
                 background-size    : 210px 170px;
                 box-shadow         : 0px 4px 0px 0px $brandColor-Black;
 
@@ -282,28 +286,108 @@ header {
                     }
                 }
 
-                &:nth-child(1){
+                &:nth-child(1) {
                     background-image: url(/img/card_01_img.png);
                 }
 
-                &:nth-child(2){
+                &:nth-child(2) {
                     background-image: url(/img/card_02_img.png.png);
                 }
 
-                &:nth-child(3){
+                &:nth-child(3) {
                     background-image: url(/img/card_03_img.png.png);
                 }
 
-                &:nth-child(4){
+                &:nth-child(4) {
                     background-image: url(/img/card_04_img.png.png);
                 }
 
-                &:nth-child(5){
+                &:nth-child(5) {
                     background-image: url(/img/card_05_img.png.png);
                 }
 
-                &:nth-child(6){
+                &:nth-child(6) {
                     background-image: url(/img/card_06_img.png.png);
+                }
+            }
+        }
+
+        .services__proposal {
+            position        : relative;
+            display         : flex;
+            align-items     : center;
+            border-radius   : 45px;
+            background-color: $brandColor-LightGrey;
+
+            .services__proposal__title {
+                padding: 60px;
+
+                h3 {
+                    margin-bottom: 26px;
+                }
+
+                p {
+                    line-height  : 130%;
+                    width        : 500px;
+                    margin-bottom: 26px;
+                }
+            }
+
+            img {
+                position: absolute;
+                right   : 0;
+            }
+        }
+    }
+}
+
+
+.studies {
+    @include flex-center;
+    margin-bottom: 140px;
+
+    .wrapper {
+        width: $mainWrapper-width-web;
+
+        .studies__title {
+            @include title-layout;
+        }
+
+        .studies__examples {
+            display         : flex;
+            padding         : 70px;
+            background-color: $brandColor-Black;
+            border-radius: 45px;
+
+            .studies__example {
+                padding     : 0 64px;
+                border-right: 1px solid white;
+
+                p {
+                    width        : 286px;
+                    color        : white;
+                    font-size    : 18px;
+                    margin-bottom: 26px;
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    border-right : none;
+                    padding-right: 0;
+                }
+
+                section {
+                    display    : flex;
+                    align-items: center;
+
+                    a {
+                        color          : $brandColor-Green;
+                        text-decoration: none;
+                        margin-right   : 16px;
+                    }
                 }
             }
         }
