@@ -1,0 +1,187 @@
+@import '_reset';
+@import '_fonts';
+
+
+$brandFont-L: 'Space Gratesk L';
+$brandFont-R: 'Space Gratesk R';
+$brandFont-M: 'Space Gratesk M';
+
+$brandColor-Black       : rgb(25, 26, 35);
+$brandColor-Black--hover: rgb(25, 26, 35);
+$brandColor-DarkGrey    : rgb(41, 42, 50);
+$brandColor-LightGrey   : rgb(243, 243, 243);
+$brandColor-Green       : rgb(185, 255, 102);
+
+$mainWrapper-width-web   : 1234px;
+$mainWrapper-width-mobile: 100%;
+
+
+@mixin flex-center {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+
+
+
+h1 {
+    font-size  : 60px;
+    font-family: $brandFont-M;
+    line-height: 76px;
+}
+
+h2 {
+    font-size  : 40px;
+    font-family: $brandFont-M;
+}
+
+h3 {
+    font-size  : 30px;
+    font-family: $brandFont-M;
+}
+
+h4 {
+    font-size  : 20px;
+    font-family: $brandFont-M;
+}
+
+p {
+    font-size: 18px;
+}
+
+body {
+    font-family: $brandFont-R;
+    font-size  : 20px;
+}
+
+button {
+    padding         : 20px 76px;
+    font-size       : 20px;
+    color           : white;
+    border          : none;
+    border-radius   : 14px;
+    background-color: $brandColor-Black;
+}
+
+button:hover {
+    background-color: $brandColor-DarkGrey;
+}
+
+
+
+header {
+    @include flex-center;
+    margin-top: 48px;
+
+    .header__wrapper {
+        margin-top     : 12px;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width          : $mainWrapper-width-web;
+
+        nav {
+            .header__menu {
+                display    : flex;
+                align-items: baseline;
+                gap        : 40px;
+
+                li {
+                    position: relative;
+                    z-index : 3;
+
+                    &::before {
+                        content         : "";
+                        height          : 40px;
+                        width           : calc(100% + 28px);
+                        top             : -9px;
+                        left            : -14px;
+                        background-color: $brandColor-Green;
+                        position        : absolute;
+                        z-index         : -1;
+                        border-radius   : 8px;
+                        opacity         : 0;
+                        cursor          : pointer;
+                    }
+
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+
+                    &:last-child {
+                        padding      : 20px 35px;
+                        border       : 2px solid $brandColor-Black;
+                        border-radius: 14px;
+                        cursor       : pointer;
+
+                        &::before {
+                            content: none;
+                        }
+
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color          : $brandColor-Black;
+                }
+            }
+        }
+    }
+}
+
+
+.brand__message {
+    @include flex-center;
+    padding: 70px 0;
+
+    .brand__message__wrapper {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : flex-start;
+        flex-wrap      : wrap;
+        width          : $mainWrapper-width-web;
+
+        aside {
+            h1 {
+                width        : 532px;
+                margin-bottom: 36px;
+            }
+
+            img {
+                display: none;
+            }
+
+            section {
+                width        : 498px;
+                line-height  : 30px;
+                margin-bottom: 36px;
+            }
+        }
+    }
+}
+
+
+.partners {
+    @include flex-center();
+    margin-top: 70px;
+    margin-bottom: 140px;
+
+    .partners__wrapper {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        width: $mainWrapper-width-web;
+
+        img{
+            filter: grayscale(1);
+        }
+    }
+}

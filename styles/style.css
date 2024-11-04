@@ -301,7 +301,5 @@ header {
 }
 
 @media (max-width: 432px){
-    body{
-        width: 430px;
-    }
+ 
 }

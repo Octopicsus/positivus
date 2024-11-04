@@ -1,0 +1,278 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Space Gratesk L";
+  src: url("/fonts/SpaceGrotesk-Light.ttf");
+}
+@font-face {
+  font-family: "Space Gratesk R";
+  src: url("/fonts/SpaceGrotesk-Regular.ttf");
+}
+@font-face {
+  font-family: "Space Gratesk M";
+  src: url("/fonts/SpaceGrotesk-Medium.ttf");
+}
+@font-face {
+  font-family: "Space Gratesk SB";
+  src: url("/fonts/SpaceGrotesk-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Space Gratesk B";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf");
+}
+h1 {
+  font-size: 60px;
+  font-family: "Space Gratesk M";
+  line-height: 76px;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Space Gratesk M";
+}
+
+h3 {
+  font-size: 30px;
+  font-family: "Space Gratesk M";
+}
+
+h4 {
+  font-size: 20px;
+  font-family: "Space Gratesk M";
+}
+
+p {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Space Gratesk R";
+  font-size: 20px;
+}
+
+button {
+  padding: 20px 76px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  background-color: rgb(25, 26, 35);
+}
+
+button:hover {
+  background-color: rgb(41, 42, 50);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+header .header__wrapper {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1234px;
+}
+header .header__wrapper nav .header__menu {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+}
+header .header__wrapper nav .header__menu li {
+  position: relative;
+  z-index: 3;
+}
+header .header__wrapper nav .header__menu li::before {
+  content: "";
+  height: 40px;
+  width: calc(100% + 28px);
+  top: -9px;
+  left: -14px;
+  background-color: rgb(185, 255, 102);
+  position: absolute;
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0;
+  cursor: pointer;
+}
+header .header__wrapper nav .header__menu li:hover::before {
+  opacity: 1;
+}
+header .header__wrapper nav .header__menu li:last-child {
+  padding: 20px 35px;
+  border: 2px solid rgb(25, 26, 35);
+  border-radius: 14px;
+  cursor: pointer;
+}
+header .header__wrapper nav .header__menu li:last-child::before {
+  content: none;
+}
+header .header__wrapper nav .header__menu li:last-child:hover {
+  background-color: white;
+}
+header .header__wrapper nav .header__menu a {
+  text-decoration: none;
+  color: rgb(25, 26, 35);
+}
+
+.brand__message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+}
+.brand__message .brand__message__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 1234px;
+}
+.brand__message .brand__message__wrapper aside h1 {
+  width: 532px;
+  margin-bottom: 36px;
+}
+.brand__message .brand__message__wrapper aside img {
+  display: none;
+}
+.brand__message .brand__message__wrapper aside section {
+  width: 498px;
+  line-height: 30px;
+  margin-bottom: 36px;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+.partners .partners__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1234px;
+}
+.partners .partners__wrapper img {
+  filter: grayscale(1);
+}
