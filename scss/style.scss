@@ -346,7 +346,7 @@ header {
     @include flex-center;
     margin-bottom: 140px;
 
-    .wrapper {
+    .studies__wrapper {
         width: $mainWrapper-width-web;
 
         .studies__title {
@@ -357,7 +357,7 @@ header {
             display         : flex;
             padding         : 70px;
             background-color: $brandColor-Black;
-            border-radius: 45px;
+            border-radius   : 45px;
 
             .studies__example {
                 padding     : 0 64px;
@@ -388,6 +388,59 @@ header {
                         text-decoration: none;
                         margin-right   : 16px;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+.process {
+    @include flex-center;
+
+    .process__wrapper {
+        width: $mainWrapper-width-web;
+
+        .process__title {
+            @include title-layout;
+
+            p {
+                width: 292px;
+            }
+        }
+
+        .process__cards {
+            display              : grid;
+            grid-template-columns: 1fr;
+            gap                  : 30px;
+
+            .process__card__01 {
+                background-color: $brandColor-Green;
+                border          : $brandColor-Black solid 2px;
+                border-radius   : 45px;
+                box-shadow      : 0px 4px 0px 0px $brandColor-Black;
+                padding         : 40px 60px;
+
+                .process__title__card {
+                    display    : flex;
+                    align-items: center;
+
+
+
+                    h1 {
+                        margin-right: 20px;
+                    }
+
+                    input {
+                        margin-left: auto;
+                    }
+                }
+
+                p {
+                    display    : block;
+                    padding-top: 30px;
+                    margin-top : 20px;
+                    border-top : 2px solid $brandColor-Black;
                 }
             }
         }

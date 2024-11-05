@@ -400,52 +400,106 @@ header .header__wrapper nav .header__menu a {
   align-items: center;
   margin-bottom: 140px;
 }
-.studies .wrapper {
+.studies .studies__wrapper {
   width: 1234px;
 }
-.studies .wrapper .studies__title {
+.studies .studies__wrapper .studies__title {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
 }
-.studies .wrapper .studies__title h2 {
+.studies .studies__wrapper .studies__title h2 {
   padding: 8px 12px;
   border-radius: 8px;
   background-color: rgb(185, 255, 102);
   margin-right: 40px;
 }
-.studies .wrapper .studies__title p {
+.studies .studies__wrapper .studies__title p {
   width: 580px;
 }
-.studies .wrapper .studies__examples {
+.studies .studies__wrapper .studies__examples {
   display: flex;
   padding: 70px;
   background-color: rgb(25, 26, 35);
   border-radius: 45px;
 }
-.studies .wrapper .studies__examples .studies__example {
+.studies .studies__wrapper .studies__examples .studies__example {
   padding: 0 64px;
   border-right: 1px solid white;
 }
-.studies .wrapper .studies__examples .studies__example p {
+.studies .studies__wrapper .studies__examples .studies__example p {
   width: 286px;
   color: white;
   font-size: 18px;
   margin-bottom: 26px;
 }
-.studies .wrapper .studies__examples .studies__example:first-child {
+.studies .studies__wrapper .studies__examples .studies__example:first-child {
   padding-left: 0;
 }
-.studies .wrapper .studies__examples .studies__example:last-child {
+.studies .studies__wrapper .studies__examples .studies__example:last-child {
   border-right: none;
   padding-right: 0;
 }
-.studies .wrapper .studies__examples .studies__example section {
+.studies .studies__wrapper .studies__examples .studies__example section {
   display: flex;
   align-items: center;
 }
-.studies .wrapper .studies__examples .studies__example section a {
+.studies .studies__wrapper .studies__examples .studies__example section a {
   color: rgb(185, 255, 102);
   text-decoration: none;
   margin-right: 16px;
+}
+
+.process {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process .process__wrapper {
+  width: 1234px;
+}
+.process .process__wrapper .process__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.process .process__wrapper .process__title h2 {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgb(185, 255, 102);
+  margin-right: 40px;
+}
+.process .process__wrapper .process__title p {
+  width: 580px;
+}
+.process .process__wrapper .process__title p {
+  width: 292px;
+}
+.process .process__wrapper .process__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.process .process__wrapper .process__cards .process__card__01 {
+  background-color: rgb(185, 255, 102);
+  border: rgb(25, 26, 35) solid 2px;
+  border-radius: 45px;
+  box-shadow: 0px 4px 0px 0px rgb(25, 26, 35);
+  padding: 40px 60px;
+}
+.process .process__wrapper .process__cards .process__card__01 .process__title__card {
+  display: flex;
+  align-items: center;
+}
+.process .process__wrapper .process__cards .process__card__01 .process__title__card h1 {
+  margin-right: 20px;
+}
+.process .process__wrapper .process__cards .process__card__01 .process__title__card input {
+  margin-left: auto;
+}
+.process .process__wrapper .process__cards .process__card__01 p {
+  display: block;
+  padding-top: 30px;
+  margin-top: 20px;
+  border-top: 2px solid rgb(25, 26, 35);
 }
