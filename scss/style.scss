@@ -85,11 +85,18 @@ button {
     border          : none;
     border-radius   : 14px;
     background-color: $brandColor-Black;
+
+    &:hover {
+        background-color: $brandColor-DarkGrey;
+
+        span{
+            opacity: 0.9;
+        }
+
+    }
 }
 
-button:hover {
-    background-color: $brandColor-DarkGrey;
-}
+
 
 
 
@@ -115,6 +122,7 @@ header {
                 li {
                     position: relative;
                     z-index : 3;
+                    transition: .3s;
 
                     &::before {
                         content         : "";
@@ -148,14 +156,19 @@ header {
                         }
 
                         &:hover {
-                            background-color: white;
+                            background-color: $brandColor-Black;
+
+                            a{
+                                color: white;
+                            }
+                            
                         }
                     }
                 }
 
                 a {
                     text-decoration: none;
-                    color          : $brandColor-Black;
+                    color          : $brandColor-DarkGrey;
                 }
             }
         }
@@ -259,6 +272,10 @@ header {
                         margin-left    : 16px;
                         text-decoration: none;
                         color          : $brandColor-Black;
+
+                        &:hover{
+                            opacity: 0.7;
+                        }
                     }
                 }
 
@@ -276,6 +293,10 @@ header {
                 &:nth-child(3),
                 &:nth-child(6) {
                     background-color: $brandColor-Black;
+
+                    a{
+                        color: white;
+                    }
                 }
 
                 &:nth-child(3) {
@@ -414,12 +435,20 @@ header {
             grid-template-columns: 1fr;
             gap                  : 30px;
 
-            .process__card__01 {
+            .process__card {
                 background-color: $brandColor-LightGrey;
                 border          : $brandColor-Black solid 2px;
                 border-radius   : 45px;
                 box-shadow      : 0px 4px 0px 0px $brandColor-Black;
                 padding         : 40px 60px;
+
+                &:has(input:checked) {
+                    background-color: $brandColor-Green;
+
+                    p {
+                        display: block;
+                    }
+                }
 
                 .process__title__card {
                     display    : flex;
@@ -430,22 +459,26 @@ header {
                         margin-right: 20px;
                     }
 
-                    .checkbox__card__01 {
+                    h3 {
+                        white-space: nowrap;
+                    }
+
+                    .checkbox__card {
                         margin-left: auto;
                         width      : 58px;
                         height     : 58px;
                         z-index    : 10;
                         opacity    : 0;
 
-                        &:checked+.card__open__01 {
+                        &:checked+.card__open {
 
                             &::after {
-                                transform: rotate(90deg);
+                                transform: rotate(0deg);
                             }
                         }
                     }
 
-                    .card__open__01 {
+                    .card__open {
                         width           : 58px;
                         height          : 58px;
                         background-color: white;
@@ -472,7 +505,7 @@ header {
                             width           : 22px;
                             height          : 5px;
                             background-color: $brandColor-Black;
-                            transform       : rotate(0deg);
+                            transform       : rotate(90deg);
                             transition      : .3s;
                         }
                     }
@@ -483,6 +516,7 @@ header {
                     padding-top: 30px;
                     margin-top : 20px;
                     border-top : 2px solid $brandColor-Black;
+
                 }
             }
         }

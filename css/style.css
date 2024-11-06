@@ -177,9 +177,11 @@ button {
   border-radius: 14px;
   background-color: rgb(25, 26, 35);
 }
-
 button:hover {
   background-color: rgb(41, 42, 50);
+}
+button:hover span {
+  opacity: 0.9;
 }
 
 header {
@@ -203,6 +205,7 @@ header .header__wrapper nav .header__menu {
 header .header__wrapper nav .header__menu li {
   position: relative;
   z-index: 3;
+  transition: 0.3s;
 }
 header .header__wrapper nav .header__menu li::before {
   content: "";
@@ -231,11 +234,14 @@ header .header__wrapper nav .header__menu li:last-child::before {
   content: none;
 }
 header .header__wrapper nav .header__menu li:last-child:hover {
-  background-color: white;
+  background-color: rgb(25, 26, 35);
+}
+header .header__wrapper nav .header__menu li:last-child:hover a {
+  color: white;
 }
 header .header__wrapper nav .header__menu a {
   text-decoration: none;
-  color: rgb(25, 26, 35);
+  color: rgb(41, 42, 50);
 }
 
 .brand__message {
@@ -341,6 +347,9 @@ header .header__wrapper nav .header__menu a {
   text-decoration: none;
   color: rgb(25, 26, 35);
 }
+.services .services__wrapper .services__cards__wrapper .services__card section a:hover {
+  opacity: 0.7;
+}
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(2), .services .services__wrapper .services__cards__wrapper .services__card:nth-child(5) {
   background-color: rgb(185, 255, 102);
 }
@@ -349,6 +358,9 @@ header .header__wrapper nav .header__menu a {
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(3), .services .services__wrapper .services__cards__wrapper .services__card:nth-child(6) {
   background-color: rgb(25, 26, 35);
+}
+.services .services__wrapper .services__cards__wrapper .services__card:nth-child(3) a, .services .services__wrapper .services__cards__wrapper .services__card:nth-child(6) a {
+  color: white;
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(3) h3 span {
   background-color: white;
@@ -480,32 +492,41 @@ header .header__wrapper nav .header__menu a {
   grid-template-columns: 1fr;
   gap: 30px;
 }
-.process .process__wrapper .process__cards .process__card__01 {
+.process .process__wrapper .process__cards .process__card {
   background-color: rgb(243, 243, 243);
   border: rgb(25, 26, 35) solid 2px;
   border-radius: 45px;
   box-shadow: 0px 4px 0px 0px rgb(25, 26, 35);
   padding: 40px 60px;
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card {
+.process .process__wrapper .process__cards .process__card:has(input:checked) {
+  background-color: rgb(185, 255, 102);
+}
+.process .process__wrapper .process__cards .process__card:has(input:checked) p {
+  display: block;
+}
+.process .process__wrapper .process__cards .process__card .process__title__card {
   display: flex;
   align-items: center;
   position: relative;
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card h1 {
+.process .process__wrapper .process__cards .process__card .process__title__card h1 {
   margin-right: 20px;
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card .checkbox__card__01 {
+.process .process__wrapper .process__cards .process__card .process__title__card h3 {
+  white-space: nowrap;
+}
+.process .process__wrapper .process__cards .process__card .process__title__card .checkbox__card {
   margin-left: auto;
   width: 58px;
   height: 58px;
   z-index: 10;
   opacity: 0;
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card .checkbox__card__01:checked + .card__open__01::after {
-  transform: rotate(90deg);
+.process .process__wrapper .process__cards .process__card .process__title__card .checkbox__card:checked + .card__open::after {
+  transform: rotate(0deg);
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card .card__open__01 {
+.process .process__wrapper .process__cards .process__card .process__title__card .card__open {
   width: 58px;
   height: 58px;
   background-color: white;
@@ -518,23 +539,23 @@ header .header__wrapper nav .header__menu a {
   margin-right: 2px;
   right: 0;
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card .card__open__01::before {
+.process .process__wrapper .process__cards .process__card .process__title__card .card__open::before {
   content: "";
   position: absolute;
   width: 22px;
   height: 5px;
   background-color: rgb(25, 26, 35);
 }
-.process .process__wrapper .process__cards .process__card__01 .process__title__card .card__open__01::after {
+.process .process__wrapper .process__cards .process__card .process__title__card .card__open::after {
   content: "";
   position: absolute;
   width: 22px;
   height: 5px;
   background-color: rgb(25, 26, 35);
-  transform: rotate(0deg);
+  transform: rotate(90deg);
   transition: 0.3s;
 }
-.process .process__wrapper .process__cards .process__card__01 p {
+.process .process__wrapper .process__cards .process__card p {
   display: none;
   padding-top: 30px;
   margin-top: 20px;
