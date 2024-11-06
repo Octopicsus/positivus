@@ -16,6 +16,7 @@ $mainWrapper-width-web   : 1234px;
 $mainWrapper-width-mobile: 100%;
 
 
+
 @mixin flex-center {
     display        : flex;
     justify-content: center;
@@ -43,6 +44,8 @@ $mainWrapper-width-mobile: 100%;
         width: 580px;
     }
 }
+
+
 
 
 h1 {
@@ -89,16 +92,11 @@ button {
     &:hover {
         background-color: $brandColor-DarkGrey;
 
-        span{
+        span {
             opacity: 0.9;
         }
-
     }
 }
-
-
-
-
 
 
 
@@ -120,8 +118,8 @@ header {
                 gap        : 40px;
 
                 li {
-                    position: relative;
-                    z-index : 3;
+                    position  : relative;
+                    z-index   : 3;
                     transition: .3s;
 
                     &::before {
@@ -158,17 +156,17 @@ header {
                         &:hover {
                             background-color: $brandColor-Black;
 
-                            a{
+                            a {
                                 color: white;
                             }
-                            
                         }
                     }
                 }
 
                 a {
-                    text-decoration: none;
                     color          : $brandColor-DarkGrey;
+                    text-decoration: none;
+                    white-space    : nowrap;
                 }
             }
         }
@@ -273,7 +271,7 @@ header {
                         text-decoration: none;
                         color          : $brandColor-Black;
 
-                        &:hover{
+                        &:hover {
                             opacity: 0.7;
                         }
                     }
@@ -294,7 +292,7 @@ header {
                 &:nth-child(6) {
                     background-color: $brandColor-Black;
 
-                    a{
+                    a {
                         color: white;
                     }
                 }
@@ -381,8 +379,11 @@ header {
             border-radius   : 45px;
 
             .studies__example {
-                padding     : 0 64px;
-                border-right: 1px solid white;
+                padding       : 0 64px;
+                border-right  : 1px solid rgba(255, 255, 255, 0.5);
+                display       : flex;
+                flex-direction: column;
+                box-sizing    : border-box;
 
                 p {
                     width        : 286px;
@@ -401,6 +402,7 @@ header {
                 }
 
                 section {
+                    margin-top : auto;
                     display    : flex;
                     align-items: center;
 
@@ -408,6 +410,10 @@ header {
                         color          : $brandColor-Green;
                         text-decoration: none;
                         margin-right   : 16px;
+
+                        &:hover {
+                            opacity: 0.9;
+                        }
                     }
                 }
             }
@@ -441,12 +447,21 @@ header {
                 border-radius   : 45px;
                 box-shadow      : 0px 4px 0px 0px $brandColor-Black;
                 padding         : 40px 60px;
+                transition      : .3s;
 
                 &:has(input:checked) {
                     background-color: $brandColor-Green;
 
                     p {
                         display: block;
+                    }
+
+                    &:hover {
+
+                        h1,
+                        h3 {
+                            color: $brandColor-Black;
+                        }
                     }
                 }
 
@@ -516,9 +531,110 @@ header {
                     padding-top: 30px;
                     margin-top : 20px;
                     border-top : 2px solid $brandColor-Black;
+                }
 
+                &:hover {
+                    background-color: $brandColor-DarkGrey;
+
+                    h1,
+                    h3 {
+                        color: white;
+                    }
                 }
             }
+        }
+    }
+}
+
+
+.team {
+    @include flex-center;
+
+    .team__wrapper {
+        display   : grid;
+        width     : $mainWrapper-width-web;
+        margin-top: 140px;
+
+        .team__title {
+            @include title-layout;
+        }
+
+        .team__cards {
+            display              : grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap                  : 40px;
+            margin-bottom        : 40px;
+
+            .team__card {
+                border-radius: 45px;
+                border       : 1px solid $brandColor-Black;
+                padding      : 35px 40px;
+                box-shadow   : 0px 4px 0px 0px $brandColor-Black;
+
+                .team__card__title {
+                    display       : flex;
+                    position      : relative;
+                    padding-bottom: 28px;
+                    margin-bottom : 28px;
+                    border-bottom : 1px solid $brandColor-Black;
+
+                    .team__avatar {
+                        width              : 102px;
+                        height             : 102px;
+                        background-repeat  : no-repeat;
+                        background-position: center;
+                        margin-right       : 20px;
+                    }
+
+                    img {
+                        position: absolute;
+                        right   : 0;
+                        top     : 0;
+                    }
+
+                    .team__title__wrapper {
+                        margin-top: auto;
+                        width     : 195px;
+
+                        h4 {
+                            margin-bottom: 4px;
+                            white-space  : nowrap;
+                        }
+
+                        .title__position {
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .profile01 {
+                        background-image: url(/img/avatar_01.png);
+                    }
+
+                    .profile02 {
+                        background-image: url(/img/avatar_02.png);
+                    }
+
+                    .profile03 {
+                        background-image: url(/img/avatar_03.png);
+                    }
+
+                    .profile04 {
+                        background-image: url(/img/avatar_04.png);
+                    }
+
+                    .profile05 {
+                        background-image: url(/img/avatar_05.png);
+                    }
+
+                    .profile06 {
+                        background-image: url(/img/avatar_06.png);
+                    }
+                }
+            }
+        }
+
+        button {
+            justify-self: end;
         }
     }
 }

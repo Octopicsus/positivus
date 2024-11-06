@@ -240,8 +240,9 @@ header .header__wrapper nav .header__menu li:last-child:hover a {
   color: white;
 }
 header .header__wrapper nav .header__menu a {
-  text-decoration: none;
   color: rgb(41, 42, 50);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand__message {
@@ -437,7 +438,10 @@ header .header__wrapper nav .header__menu a {
 }
 .studies .studies__wrapper .studies__examples .studies__example {
   padding: 0 64px;
-  border-right: 1px solid white;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .studies .studies__wrapper .studies__examples .studies__example p {
   width: 286px;
@@ -453,6 +457,7 @@ header .header__wrapper nav .header__menu a {
   padding-right: 0;
 }
 .studies .studies__wrapper .studies__examples .studies__example section {
+  margin-top: auto;
   display: flex;
   align-items: center;
 }
@@ -460,6 +465,9 @@ header .header__wrapper nav .header__menu a {
   color: rgb(185, 255, 102);
   text-decoration: none;
   margin-right: 16px;
+}
+.studies .studies__wrapper .studies__examples .studies__example section a:hover {
+  opacity: 0.9;
 }
 
 .process {
@@ -498,12 +506,17 @@ header .header__wrapper nav .header__menu a {
   border-radius: 45px;
   box-shadow: 0px 4px 0px 0px rgb(25, 26, 35);
   padding: 40px 60px;
+  transition: 0.3s;
 }
 .process .process__wrapper .process__cards .process__card:has(input:checked) {
   background-color: rgb(185, 255, 102);
 }
 .process .process__wrapper .process__cards .process__card:has(input:checked) p {
   display: block;
+}
+.process .process__wrapper .process__cards .process__card:has(input:checked):hover h1,
+.process .process__wrapper .process__cards .process__card:has(input:checked):hover h3 {
+  color: rgb(25, 26, 35);
 }
 .process .process__wrapper .process__cards .process__card .process__title__card {
   display: flex;
@@ -560,4 +573,99 @@ header .header__wrapper nav .header__menu a {
   padding-top: 30px;
   margin-top: 20px;
   border-top: 2px solid rgb(25, 26, 35);
+}
+.process .process__wrapper .process__cards .process__card:hover {
+  background-color: rgb(41, 42, 50);
+}
+.process .process__wrapper .process__cards .process__card:hover h1,
+.process .process__wrapper .process__cards .process__card:hover h3 {
+  color: white;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .team__wrapper {
+  display: grid;
+  width: 1234px;
+  margin-top: 140px;
+}
+.team .team__wrapper .team__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.team .team__wrapper .team__title h2 {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgb(185, 255, 102);
+  margin-right: 40px;
+}
+.team .team__wrapper .team__title p {
+  width: 580px;
+}
+.team .team__wrapper .team__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.team .team__wrapper .team__cards .team__card {
+  border-radius: 45px;
+  border: 1px solid rgb(25, 26, 35);
+  padding: 35px 40px;
+  box-shadow: 0px 4px 0px 0px rgb(25, 26, 35);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title {
+  display: flex;
+  position: relative;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgb(25, 26, 35);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .team__avatar {
+  width: 102px;
+  height: 102px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+}
+.team .team__wrapper .team__cards .team__card .team__card__title img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .team__title__wrapper {
+  margin-top: auto;
+  width: 195px;
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .team__title__wrapper h4 {
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .team__title__wrapper .title__position {
+  white-space: nowrap;
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile01 {
+  background-image: url(/img/avatar_01.png);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile02 {
+  background-image: url(/img/avatar_02.png);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile03 {
+  background-image: url(/img/avatar_03.png);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile04 {
+  background-image: url(/img/avatar_04.png);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile05 {
+  background-image: url(/img/avatar_05.png);
+}
+.team .team__wrapper .team__cards .team__card .team__card__title .profile06 {
+  background-image: url(/img/avatar_06.png);
+}
+.team .team__wrapper button {
+  justify-self: end;
 }
