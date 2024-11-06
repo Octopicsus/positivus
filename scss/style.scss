@@ -549,6 +549,7 @@ header {
 
 .team {
     @include flex-center;
+    margin-bottom: 100px;
 
     .team__wrapper {
         display   : grid;
@@ -570,6 +571,11 @@ header {
                 border       : 1px solid $brandColor-Black;
                 padding      : 35px 40px;
                 box-shadow   : 0px 4px 0px 0px $brandColor-Black;
+                cursor       : pointer;
+
+                &:hover{
+                    background-color: $brandColor-LightGrey;
+                }
 
                 .team__card__title {
                     display       : flex;
@@ -594,7 +600,6 @@ header {
 
                     .team__title__wrapper {
                         margin-top: auto;
-                        width     : 195px;
 
                         h4 {
                             margin-bottom: 4px;
@@ -635,6 +640,18 @@ header {
 
         button {
             justify-self: end;
+        }
+    }
+}
+
+.testimonials {
+    @include flex-center;
+
+    .testimonials__wrapper {
+        width: $mainWrapper-width-web;
+
+        .testimonials__title {
+            @include title-layout;
         }
     }
 }
