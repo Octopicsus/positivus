@@ -92,6 +92,7 @@ button {
 
     &:hover {
         background-color: $brandColor-DarkGrey;
+        scale           : 0.98;
 
         span {
             color: $brandColor-Green;
@@ -105,6 +106,12 @@ button {
 header {
     @include flex-center;
     margin-top: 48px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.74);
+    z-index: 9;
+    padding-bottom: 8px;
+    backdrop-filter: blur(12px);
 
     .header__wrapper {
         @include flex-space-between;
@@ -135,10 +142,12 @@ header {
                         border-radius   : 8px;
                         cursor          : pointer;
                         opacity         : 0;
-                        transition      : .3s ease-in;
+                        transition      : .3s ease-in-out;
                     }
 
                     &:hover {
+                        scale: 0.95;
+
                         &::before {
                             opacity: 1;
                         }
@@ -156,9 +165,10 @@ header {
 
                         &:hover {
                             background-color: $brandColor-Black;
+                            scale           : 0.98;
 
                             a {
-                                color: $brandColor-Green;
+                                color: white;
                             }
                         }
                     }
@@ -172,6 +182,11 @@ header {
             }
         }
     }
+}
+
+
+main {
+    // display: none;
 }
 
 
@@ -249,6 +264,12 @@ header {
                 background-position: 88% center;
                 background-size    : 210px 170px;
                 box-shadow         : 0px 4px 0px 0px $brandColor-Black;
+                transition: .3s;
+
+                &:hover {
+                    transform: rotate(2deg);
+                    scale: 0.99;
+                }
 
                 h3 {
                     line-height  : 134%;
@@ -265,16 +286,17 @@ header {
                 section {
                     display    : flex;
                     align-items: center;
+                    cursor     : pointer;
 
                     a {
                         font-size      : 20px;
                         margin-left    : 16px;
                         text-decoration: none;
                         color          : $brandColor-Black;
+                    }
 
-                        &:hover {
-                            opacity: 0.7;
-                        }
+                    &:hover {
+                        opacity: 0.7;
                     }
                 }
 
@@ -411,10 +433,11 @@ header {
                         color          : $brandColor-Green;
                         text-decoration: none;
                         margin-right   : 16px;
+                    }
 
-                        &:hover {
-                            opacity: 0.9;
-                        }
+                    &:hover {
+                        opacity: 0.7;
+                        cursor : pointer;
                     }
                 }
             }
@@ -577,6 +600,7 @@ header {
 
                 &:hover {
                     background-color: $brandColor-Green;
+                    scale           : 0.98;
                 }
 
                 .team__card__title {
@@ -730,13 +754,12 @@ header {
             }
 
             .navigation__slider__wrapper {
-                margin-left  : auto;
-                margin-right : auto;
-                margin-top   : auto;
-                margin-bottom: 68px;
-                width        : 564px;
-                height       : 24px;
-
+                margin-left    : auto;
+                margin-right   : auto;
+                margin-top     : auto;
+                margin-bottom  : 68px;
+                width          : 564px;
+                height         : 24px;
                 display        : flex;
                 justify-content: space-between;
 
@@ -756,10 +779,17 @@ header {
                         background     : url(/img/slider-item.svg) no-repeat center;
                         background-size: contain;
                         width          : 14px;
-                        cursor: pointer;
 
-                        &:hover{
-                            opacity: 0.8;
+                        &:hover {
+                            opacity: 0.7;
+                            cursor : pointer;
+                            scale  : 0.9;
+
+                            &:nth-child(1) {
+                                opacity: 1;
+                                cursor : default;
+                                scale  : 1;
+                            }
                         }
                     }
 
@@ -772,19 +802,29 @@ header {
                     background     : url(/img/slider-nav-arrow.svg) no-repeat center;
                     background-size: contain;
                     width          : 24px;
-                    cursor: pointer;
 
-                    &:hover{
+                    &:hover {
                         opacity: 0.8;
-
+                        cursor : pointer;
+                        scale  : 0.9;
                     }
                 }
 
                 .position--min-max {
                     opacity: 0.3;
                 }
-
             }
+        }
+    }
+}
+
+
+.contact{
+    @include flex-center;
+    .contact__wrapper{
+        width: $mainWrapper-width-web;
+        .contact__title{
+            @include title-layout;
         }
     }
 }
