@@ -88,12 +88,13 @@ button {
     border          : none;
     border-radius   : 14px;
     background-color: $brandColor-Black;
+    transition      : .3s;
 
     &:hover {
         background-color: $brandColor-DarkGrey;
 
         span {
-            opacity: 0.9;
+            color: $brandColor-Green;
         }
     }
 }
@@ -134,7 +135,7 @@ header {
                         border-radius   : 8px;
                         cursor          : pointer;
                         opacity         : 0;
-                        transition      : .3s;
+                        transition      : .3s ease-in;
                     }
 
                     &:hover {
@@ -157,7 +158,7 @@ header {
                             background-color: $brandColor-Black;
 
                             a {
-                                color: white;
+                                color: $brandColor-Green;
                             }
                         }
                     }
@@ -571,10 +572,11 @@ header {
                 border       : 1px solid $brandColor-Black;
                 padding      : 35px 40px;
                 box-shadow   : 0px 4px 0px 0px $brandColor-Black;
+                transition   : .3s;
                 cursor       : pointer;
 
-                &:hover{
-                    background-color: $brandColor-LightGrey;
+                &:hover {
+                    background-color: $brandColor-Green;
                 }
 
                 .team__card__title {
@@ -646,12 +648,143 @@ header {
 
 .testimonials {
     @include flex-center;
+    margin-bottom: 140px;
 
     .testimonials__wrapper {
         width: $mainWrapper-width-web;
 
         .testimonials__title {
             @include title-layout;
+        }
+
+        .testimonials__window {
+            width           : 100%;
+            height          : 625px;
+            display         : flex;
+            flex-direction  : column;
+            background-color: $brandColor-Black;
+            border-radius   : 45px;
+            padding-top     : 84px;
+            box-sizing      : border-box;
+
+            .testimonials__slider {
+                width          : 100%;
+                display        : flex;
+                justify-content: center;
+                gap            : 50px;
+                box-sizing     : border-box;
+                overflow       : hidden;
+
+                .testimonial__item {
+
+                    .testimonial__item__wrapper {
+                        justify-content: center;
+
+                        .testimonial__descr {
+                            border       : solid $brandColor-Green 1px;
+                            padding      : 52px 48px;
+                            border-radius: 45px;
+
+                            p {
+                                color      : white;
+                                font-size  : 18px;
+                                width      : 502px;
+                                line-height: 134%;
+                            }
+                        }
+                    }
+
+                    .tooltip {
+                        width          : 0;
+                        height         : 0;
+                        border         : 34px solid transparent;
+                        border-top     : 32px solid $brandColor-Green;
+                        margin-left    : 50px;
+                        position       : relative;
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+
+                        &::before {
+                            content   : '';
+                            position  : absolute;
+                            width     : 0;
+                            height    : 0;
+                            border    : 34px solid transparent;
+                            border-top: 32px solid $brandColor-Black;
+                            transform : translateY(-1px);
+                        }
+                    }
+
+                    h4 {
+                        color      : $brandColor-Green;
+                        margin-left: 80px;
+                        transform  : translateY(-5px);
+                    }
+
+                    .profile__position {
+                        color      : white;
+                        margin-left: 80px;
+                    }
+                }
+            }
+
+            .navigation__slider__wrapper {
+                margin-left  : auto;
+                margin-right : auto;
+                margin-top   : auto;
+                margin-bottom: 68px;
+                width        : 564px;
+                height       : 24px;
+
+                display        : flex;
+                justify-content: space-between;
+
+                .btn__previous {
+                    background     : url(/img/slider-nav-arrow.svg) no-repeat center;
+                    background-size: contain;
+                    width          : 24px;
+                    transform      : rotate(180deg);
+                }
+
+                .navigation__slider__position {
+                    display        : flex;
+                    justify-content: space-between;
+                    gap            : 20px;
+
+                    .item__slider__position {
+                        background     : url(/img/slider-item.svg) no-repeat center;
+                        background-size: contain;
+                        width          : 14px;
+                        cursor: pointer;
+
+                        &:hover{
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .position--selected {
+                        background: url(/img/slider-item-selected.svg) no-repeat center;
+                    }
+                }
+
+                .btn__next {
+                    background     : url(/img/slider-nav-arrow.svg) no-repeat center;
+                    background-size: contain;
+                    width          : 24px;
+                    cursor: pointer;
+
+                    &:hover{
+                        opacity: 0.8;
+
+                    }
+                }
+
+                .position--min-max {
+                    opacity: 0.3;
+                }
+
+            }
         }
     }
 }
