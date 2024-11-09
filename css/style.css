@@ -860,6 +860,9 @@ header .header__wrapper nav .header__menu a {
 .contact .contact__wrapper .contact__form {
   background-color: rgb(243, 243, 243);
   border-radius: 45px;
+  background-image: url(/img/Illustration_02.svg);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .contact .contact__wrapper .contact__form form {
   display: flex;
@@ -876,9 +879,30 @@ header .header__wrapper nav .header__menu a {
   display: flex;
   align-items: center;
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button input {
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio {
   width: 28px;
   height: 28px;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  border: 1px solid rgb(25, 26, 35);
+  display: grid;
+  place-content: center;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgb(185, 255, 102);
+  transform: scale(0);
+  transition: 160ms transform ease-in-out;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio:checked::before {
+  transform: scale(1);
 }
 .contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button label {
   margin-left: 14px;

@@ -829,19 +829,17 @@ header {
         }
 
         .contact__form {
-            background-color: $brandColor-LightGrey;
-            border-radius   : 45px;
+            background-color   : $brandColor-LightGrey;
+            border-radius      : 45px;
+            background-image   : url(/img/Illustration_02.svg);
+            background-repeat  : no-repeat;
+            background-position: right;
 
             form {
-
                 display       : flex;
                 flex-direction: column;
                 width         : 556px;
                 padding       : 50px 100px;
-
-
-
-
 
                 .form__radio__wrapper {
                     display      : flex;
@@ -852,9 +850,32 @@ header {
                         display    : flex;
                         align-items: center;
 
-                        input {
-                            width : 28px;
-                            height: 28px;
+                        .radio {
+                            width           : 28px;
+                            height          : 28px;
+                            appearance      : none;
+                            background-color: #fff;
+                            border-radius   : 50%;
+                            margin          : 0;
+                            font            : inherit;
+                            color           : currentColor;
+                            border: 1px solid $brandColor-Black;
+                            display: grid;
+                            place-content: center;
+
+                            &::before{
+                                content: "";
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background-color: $brandColor-Green;
+                                transform: scale(0);
+                                transition: 160ms transform ease-in-out;
+                            }
+
+                            &:checked::before{
+                                transform: scale(1);
+                            }
                         }
 
                         label {
@@ -876,7 +897,7 @@ header {
                     padding-left : 30px;
                     font-size    : 18px;
                     box-sizing   : border-box;
-                    font-family: $brandFont-R;
+                    font-family  : $brandFont-R;
 
                     &::placeholder {
                         color: rgb(137, 137, 137);
@@ -889,8 +910,8 @@ header {
                     border-radius: 14px;
                     border       : 1px solid $brandColor-Black;
                     margin-bottom: 40px;
-                    padding: 18px 30px;
-                    font-size: 18px;
+                    padding      : 18px 30px;
+                    font-size    : 18px;
                 }
             }
         }
