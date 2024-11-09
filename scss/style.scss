@@ -820,6 +820,7 @@ header {
 
 .contact {
     @include flex-center;
+    margin-bottom: 140px;
 
     .contact__wrapper {
         width: $mainWrapper-width-web;
@@ -859,21 +860,21 @@ header {
                             margin          : 0;
                             font            : inherit;
                             color           : currentColor;
-                            border: 1px solid $brandColor-Black;
-                            display: grid;
-                            place-content: center;
+                            border          : 1px solid $brandColor-Black;
+                            display         : grid;
+                            place-content   : center;
 
-                            &::before{
-                                content: "";
-                                width: 16px;
-                                height: 16px;
-                                border-radius: 50%;
+                            &::before {
+                                content         : "";
+                                width           : 16px;
+                                height          : 16px;
+                                border-radius   : 50%;
                                 background-color: $brandColor-Green;
-                                transform: scale(0);
-                                transition: 160ms transform ease-in-out;
+                                transform       : scale(0);
+                                transition      : 160ms transform ease-in-out;
                             }
 
-                            &:checked::before{
+                            &:checked::before {
                                 transform: scale(1);
                             }
                         }
@@ -912,6 +913,176 @@ header {
                     margin-bottom: 40px;
                     padding      : 18px 30px;
                     font-size    : 18px;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    @include flex-center;
+
+
+    .footer {
+        width                  : $mainWrapper-width-web;
+        padding                : 55px 60px;
+        padding-bottom: 0;
+        box-sizing             : border-box;
+        border-top-left-radius : 45px;
+        border-top-right-radius: 45px;
+        background-color       : $brandColor-Black;
+        color                  : white;
+
+        .footer__header {
+            width          : 100%;
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+
+            .footer__logo {
+                background-image   : url(/img/brand_logo_white.svg);
+                background-repeat  : no-repeat;
+                background-position: center;
+                width              : 180px;
+                height             : 29px;
+            }
+
+            .footer__menu {
+                display: flex;
+                gap    : 40px;
+
+                li {
+                    a {
+                        font-size      : 18px;
+                        color          : white;
+                        text-decoration: underline;
+                        transition     : .3s;
+
+                        &:hover {
+                            text-decoration: none;
+                            opacity        : 0.8;
+                        }
+                    }
+                }
+            }
+
+            .footer__wrapper__socials {
+                display: flex;
+                gap    : 20px;
+
+                .social__portal {
+                    width              : 30px;
+                    height             : 30px;
+                    background-repeat  : no-repeat;
+                    background-position: center;
+                    transition         : .3s;
+                    cursor             : pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+
+                .linkedin {
+                    background-image: url(/img/linkedin_social_icon.svg);
+                }
+
+                .facebook {
+                    background-image: url(/img/facebook_social_icon.svg);
+                }
+
+                .twiter {
+                    background-image: url(/img/twiter_social_icon.svg);
+                }
+            }
+        }
+
+        .footer__main {
+            display        : flex;
+            justify-content: space-between;
+            box-sizing     : border-box;
+            padding-bottom : 50px;
+            margin-top     : 96px;
+            border-bottom  : 1px solid white;
+
+            .footer__contact__descr {
+
+                h4 {
+                    display         : inline-block;
+                    padding         : 4px 8px;
+                    border-radius   : 8px;
+                    color           : $brandColor-Black;
+                    background-color: $brandColor-Green;
+                    margin-bottom   : 28px;
+                }
+
+                p {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                    }
+                }
+            }
+
+            form {
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                gap             : 20px;
+                background-color: $brandColor-DarkGrey;
+                padding         : 0 40px;
+                border-radius   : 14px;
+
+                input,
+                button {
+                    justify-self: flex-start;
+                }
+
+                input {
+                    width           : 285px;
+                    height          : 64px;
+                    border-radius   : 14px;
+                    background-color: transparent;
+                    border          : 1px solid white;
+                    padding-left    : 36px;
+                    font-size       : 18px;
+                    font-family     : $brandFont-R;
+                    color           : white;
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+
+                button {
+                    padding         : 20px 35px;
+                    background-color: $brandColor-Green;
+                    color           : $brandColor-Black;
+
+                    &:hover {
+                        background-color: $brandColor-Black;
+                        border          : 1px solid $brandColor-Green;
+                    }
+                }
+            }
+        }
+
+        .footer__rights{
+            display: flex;
+            gap: 40px;
+            margin: 50px 0;
+            font-size: 18px;
+
+            a{
+                text-decoration: underline;
+                cursor: pointer;
+                
+                &:hover{
+                    text-decoration: none;
+                    opacity: 0.8;
                 }
             }
         }
