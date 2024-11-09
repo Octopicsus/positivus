@@ -177,6 +177,7 @@ button {
   border-radius: 14px;
   background-color: rgb(25, 26, 35);
   transition: 0.3s;
+  cursor: pointer;
 }
 button:hover {
   background-color: rgb(41, 42, 50);
@@ -193,10 +194,11 @@ header {
   margin-top: 48px;
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.74);
+  background-color: rgba(255, 255, 255, 0.856);
   z-index: 9;
   padding-bottom: 8px;
   backdrop-filter: blur(12px);
+  border-bottom: 2px rgba(255, 255, 255, 0.4) solid;
 }
 header .header__wrapper {
   display: flex;
@@ -554,6 +556,7 @@ header .header__wrapper nav .header__menu a {
   height: 58px;
   z-index: 10;
   opacity: 0;
+  cursor: pointer;
 }
 .process .process__wrapper .process__cards .process__card .process__title__card .checkbox__card:checked + .card__open::after {
   transform: rotate(0deg);
@@ -853,4 +856,56 @@ header .header__wrapper nav .header__menu a {
 }
 .contact .contact__wrapper .contact__title p {
   width: 580px;
+}
+.contact .contact__wrapper .contact__form {
+  background-color: rgb(243, 243, 243);
+  border-radius: 45px;
+}
+.contact .contact__wrapper .contact__form form {
+  display: flex;
+  flex-direction: column;
+  width: 556px;
+  padding: 50px 100px;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper {
+  display: flex;
+  gap: 34px;
+  margin-bottom: 40px;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button {
+  display: flex;
+  align-items: center;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button input {
+  width: 28px;
+  height: 28px;
+}
+.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button label {
+  margin-left: 14px;
+}
+.contact .contact__wrapper .contact__form form .form__title {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.contact .contact__wrapper .contact__form form .form__text__input {
+  height: 60px;
+  border-radius: 14px;
+  border: 1px solid rgb(25, 26, 35);
+  margin-bottom: 24px;
+  padding-left: 30px;
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: "Space Gratesk R";
+}
+.contact .contact__wrapper .contact__form form .form__text__input::placeholder {
+  color: rgb(137, 137, 137);
+}
+.contact .contact__wrapper .contact__form form textarea {
+  resize: none;
+  height: 190px;
+  border-radius: 14px;
+  border: 1px solid rgb(25, 26, 35);
+  margin-bottom: 40px;
+  padding: 18px 30px;
+  font-size: 18px;
 }
