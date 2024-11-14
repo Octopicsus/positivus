@@ -32,6 +32,17 @@ $mainWrapper-width-mobile: 100%;
     display      : flex;
     align-items  : center;
     margin-bottom: 80px;
+
+    h2 {
+        padding         : 8px 12px;
+        border-radius   : 8px;
+        background-color: $brandColor-Green;
+        margin-right    : 40px;
+    }
+
+    p {
+        width: 580px;
+    }
 }
 
 @mixin mobile-wrapper {
@@ -43,40 +54,31 @@ $mainWrapper-width-mobile: 100%;
 
 
 
-h2 {
-    padding         : 8px 12px;
-    border-radius   : 8px;
-    background-color: $brandColor-Green;
-    margin-right    : 40px;
-}
 
-p {
-    width: 580px;
-}
 
 h1 {
-    font-size  : 60px;
+    font-size: clamp(2.25rem, 1.5147rem + 3.1373vw, 3.75rem);
     font-family: $brandFont-M;
-    line-height: 76px;
+    line-height: 130%;
 }
 
 h2 {
-    font-size  : 40px;
+    font-size  : clamp(2.25rem, 2.1275rem + 0.5229vw, 2.5rem);
     font-family: $brandFont-M;
 }
 
 h3 {
-    font-size  : 30px;
+    font-size  : clamp(1.625rem, 1.5025rem + 0.5229vw, 1.875rem);
     font-family: $brandFont-M;
 }
 
 h4 {
-    font-size  : 20px;
+    font-size  : clamp(1.125rem, 1.0637rem + 0.2614vw, 1.25rem);
     font-family: $brandFont-M;
 }
 
 p {
-    font-size  : 18px;
+    font-size  : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
     font-family: $brandFont-R;
     line-height: 130%;
 }
@@ -89,7 +91,7 @@ body {
 button {
     padding         : 20px 76px;
     font-family     : $brandFont-R;
-    font-size       : 20px;
+    font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
     color           : white;
     border          : none;
     border-radius   : 14px;
@@ -213,6 +215,7 @@ header {
                     }
 
                     &:checked:checked~.header__menu--toggle {
+                        display  : grid;
                         transform: translateX(0);
                     }
                 }
@@ -253,7 +256,7 @@ header {
                 }
 
                 .header__menu--toggle {
-                    display         : grid;
+                    display         : none;
                     place-content   : center;
                     position        : absolute;
                     top             : 0;
@@ -263,6 +266,7 @@ header {
                     background-color: white;
                     transform       : translateX(100%);
                     transition      : .3s;
+
 
                     .toggle__list {
                         display: grid;
@@ -299,7 +303,7 @@ header {
 
 .brand__message {
     @include flex-center;
-    padding: 70px 0;
+    padding: clamp(1.25rem, 6.536vw - 0.282rem, 4.375rem) 0;
 
     .brand__message__wrapper {
         @include flex-space-between;
@@ -307,21 +311,27 @@ header {
         flex-wrap  : wrap;
         width      : $mainWrapper-width-web;
 
-        aside {
+        .brand__message__descr {
+            position: relative;
+            width   : 100%;
+
             h1 {
-                width        : 532px;
-                margin-bottom: 36px;
+                width        : clamp(20.938rem, 25.621vw + 14.933rem, 33.188rem);
+                margin-bottom: clamp(0.625rem, 3.66vw - 0.233rem, 2.375rem);
             }
 
             img {
-                display: none;
+                position: absolute;
+                right   : 0;
+                top     : 0;
+                width   : clamp(18.75rem, 125vw - 51.563rem, 37.5rem);
             }
 
             p {
-                width        : 498px;
-                font-size    : 20px;
-                line-height  : 30px;
-                margin-bottom: 36px;
+                width        : clamp(20.938rem, 21.307vw + 15.944rem, 31.125rem);
+                font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
+                line-height: 130%;
+                margin-bottom: 42px;
             }
         }
     }
@@ -1213,6 +1223,11 @@ footer {
         }
     }
 
+    .brand__message {
+        .brand__message__wrapper {
+            @include mobile-wrapper;
+        }
+    }
 }
 
 
@@ -1238,6 +1253,24 @@ footer {
 }
 
 
+@media(max-width: 920px) {
+    .brand__message {
+        .brand__message__wrapper {
+            .brand__message__descr {
+                display       : flex;
+                flex-direction: column;
+
+                img {
+                    position   : unset;
+                    width      : clamp(18.75rem, 55.046vw + 5.849rem, 37.5rem);
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+
 @media(max-width: 768px) {
 
     header {
@@ -1253,6 +1286,7 @@ footer {
     }
 }
 
+
 @media(max-width: 425px) {
 
     header {
@@ -1265,6 +1299,21 @@ footer {
                 }
             }
         }
+    }
+
+    .brand__message{
+        .brand__message__wrapper{
+            .brand__message__descr{
+                img{
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+                
+            }
+
+        }
+
     }
 
 }
