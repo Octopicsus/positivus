@@ -32,21 +32,27 @@ $mainWrapper-width-mobile: 100%;
     display      : flex;
     align-items  : center;
     margin-bottom: 80px;
+}
 
-    h2 {
-        padding         : 8px 12px;
-        border-radius   : 8px;
-        background-color: $brandColor-Green;
-        margin-right    : 40px;
-    }
-
-    p {
-        width: 580px;
-    }
+@mixin mobile-wrapper {
+    width  : 100%;
+    padding: 0 20px;
 }
 
 
 
+
+
+h2 {
+    padding         : 8px 12px;
+    border-radius   : 8px;
+    background-color: $brandColor-Green;
+    margin-right    : 40px;
+}
+
+p {
+    width: 580px;
+}
 
 h1 {
     font-size  : 60px;
@@ -264,8 +270,8 @@ header {
                 transition         : .3s;
 
                 &:hover {
-                    transform: rotate(2deg);
-                    scale    : 0.99;
+                    transform: rotate(-1deg);
+                    scale    : 1.02;
                 }
 
                 h3 {
@@ -926,7 +932,7 @@ footer {
     .footer {
         width                  : $mainWrapper-width-web;
         padding                : 55px 60px;
-        padding-bottom: 0;
+        padding-bottom         : 0;
         box-sizing             : border-box;
         border-top-left-radius : 45px;
         border-top-right-radius: 45px;
@@ -1069,21 +1075,32 @@ footer {
             }
         }
 
-        .footer__rights{
-            display: flex;
-            gap: 40px;
-            margin: 50px 0;
+        .footer__rights {
+            display  : flex;
+            gap      : 40px;
+            margin   : 50px 0;
             font-size: 18px;
 
-            a{
+            a {
                 text-decoration: underline;
-                cursor: pointer;
-                
-                &:hover{
+                cursor         : pointer;
+
+                &:hover {
                     text-decoration: none;
-                    opacity: 0.8;
+                    opacity        : 0.8;
                 }
             }
         }
     }
+}
+
+
+@media (max-width: 1274px) {
+
+    header {
+        .header__wrapper {
+            @include mobile-wrapper;
+        }
+    }
+
 }

@@ -136,6 +136,17 @@ table {
   font-family: "Space Gratesk B";
   src: url("/fonts/SpaceGrotesk-Bold.ttf");
 }
+h2 {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgb(185, 255, 102);
+  margin-right: 40px;
+}
+
+p {
+  width: 580px;
+}
+
 h1 {
   font-size: 60px;
   font-family: "Space Gratesk M";
@@ -317,15 +328,6 @@ header .header__wrapper nav .header__menu a {
   align-items: center;
   margin-bottom: 80px;
 }
-.services .services__wrapper .services__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.services .services__wrapper .services__title p {
-  width: 580px;
-}
 .services .services__wrapper .services__cards__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -344,8 +346,8 @@ header .header__wrapper nav .header__menu a {
   transition: 0.3s;
 }
 .services .services__wrapper .services__cards__wrapper .services__card:hover {
-  transform: rotate(2deg);
-  scale: 0.99;
+  transform: rotate(-1deg);
+  scale: 1.02;
 }
 .services .services__wrapper .services__cards__wrapper .services__card h3 {
   line-height: 134%;
@@ -441,15 +443,6 @@ header .header__wrapper nav .header__menu a {
   align-items: center;
   margin-bottom: 80px;
 }
-.studies .studies__wrapper .studies__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.studies .studies__wrapper .studies__title p {
-  width: 580px;
-}
 .studies .studies__wrapper .studies__examples {
   display: flex;
   padding: 70px;
@@ -503,15 +496,6 @@ header .header__wrapper nav .header__menu a {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
-}
-.process .process__wrapper .process__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.process .process__wrapper .process__title p {
-  width: 580px;
 }
 .process .process__wrapper .process__title p {
   width: 292px;
@@ -620,15 +604,6 @@ header .header__wrapper nav .header__menu a {
   align-items: center;
   margin-bottom: 80px;
 }
-.team .team__wrapper .team__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.team .team__wrapper .team__title p {
-  width: 580px;
-}
 .team .team__wrapper .team__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -711,15 +686,6 @@ header .header__wrapper nav .header__menu a {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
-}
-.testimonials .testimonials__wrapper .testimonials__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.testimonials .testimonials__wrapper .testimonials__title p {
-  width: 580px;
 }
 .testimonials .testimonials__wrapper .testimonials__window {
   width: 100%;
@@ -848,15 +814,6 @@ header .header__wrapper nav .header__menu a {
   display: flex;
   align-items: center;
   margin-bottom: 80px;
-}
-.contact .contact__wrapper .contact__title h2 {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: rgb(185, 255, 102);
-  margin-right: 40px;
-}
-.contact .contact__wrapper .contact__title p {
-  width: 580px;
 }
 .contact .contact__wrapper .contact__form {
   background-color: rgb(243, 243, 243);
@@ -1072,4 +1029,11 @@ footer .footer .footer__rights a {
 footer .footer .footer__rights a:hover {
   text-decoration: none;
   opacity: 0.8;
+}
+
+@media (max-width: 1274px) {
+  header .header__wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
