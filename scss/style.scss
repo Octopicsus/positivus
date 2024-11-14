@@ -112,7 +112,7 @@ button {
 
 header {
     @include flex-center;
-    margin-top      : 48px;
+    margin-top      : clamp(0rem, 3.097vw - 0.716rem, 3rem);
     position        : sticky;
     top             : 0;
     background-color: rgba(255, 255, 255, 0.856);
@@ -131,7 +131,7 @@ header {
             .header__menu {
                 display    : flex;
                 align-items: baseline;
-                gap        : 40px;
+                gap        : clamp(1.25rem, 1.29vw + 0.952rem, 2.5rem);
 
                 li {
                     position  : relative;
@@ -186,6 +186,110 @@ header {
                     color          : $brandColor-DarkGrey;
                     text-decoration: none;
                     white-space    : nowrap;
+                }
+            }
+
+            .toggle__menu {
+                display: none;
+
+                .toggle__checkbox {
+                    width   : 36px;
+                    height  : 36px;
+                    position: absolute;
+                    opacity : 0;
+                    z-index : 99;
+
+                    &:checked+.burger::before {
+                        top       : 11px;
+                        transform : rotate(45deg);
+                        box-shadow: 0 6px 0 transparent;
+                        transition: box-shadow .15s, top .3s, transform .3s .15s;
+                    }
+
+                    &:checked+.burger::after {
+                        bottom    : 11px;
+                        transform : rotate(-45deg);
+                        transition: bottom .3s, transform .3s .15s;
+                    }
+
+                    &:checked:checked~.header__menu--toggle {
+                        transform: translateX(0);
+                    }
+                }
+
+                .burger {
+                    width           : 36px;
+                    height          : 26px;
+                    position        : relative;
+                    display         : block;
+                    border          : none;
+                    background-color: transparent;
+                    cursor          : pointer;
+                    margin-left     : 3px;
+                    z-index         : 1;
+                    scale           : 1;
+
+                    &::after,
+                    &::before {
+                        content   : '';
+                        left      : 0;
+                        position  : absolute;
+                        display   : block;
+                        width     : 100%;
+                        height    : 3px;
+                        background: $brandColor-Black;
+                    }
+
+                    &::before {
+                        top       : 0;
+                        box-shadow: 0 11px 0 $brandColor-Black;
+                        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+                    }
+
+                    &::after {
+                        bottom    : 0;
+                        transition: .3s .15s, bottom transform .3s;
+                    }
+                }
+
+                .header__menu--toggle {
+                    display         : grid;
+                    place-content   : center;
+                    position        : absolute;
+                    top             : 0;
+                    right           : 0;
+                    width           : 100%;
+                    height          : calc(100vh - clamp(0rem, 5.974vw - 1.381rem, 2.875rem));
+                    background-color: white;
+                    transform       : translateX(100%);
+                    transition      : .3s;
+
+                    .toggle__list {
+                        display: grid;
+                        gap    : 38px;
+
+                        li {
+                            margin-left: 4px;
+
+                            a {
+                                text-decoration: none;
+                                color          : $brandColor-Black;
+                                font-size      : 32px;
+                            }
+
+                            &:last-child {
+                                margin-left  : 0;
+                                margin-top   : 20px;
+                                padding      : 20px 30px;
+                                border       : 2px solid $brandColor-Black;
+                                border-radius: 14px;
+
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1095,11 +1199,71 @@ footer {
 }
 
 
+
+
+
+
+
 @media (max-width: 1274px) {
 
     header {
+
         .header__wrapper {
             @include mobile-wrapper;
+        }
+    }
+
+}
+
+
+@media(max-width: 1140px) {
+
+    header {
+        .header__wrapper {
+            img {
+                width: clamp(9rem, 4.903vw + 7.866rem, 13.75rem);
+            }
+
+            nav {
+                .header__menu {
+                    display: none;
+                }
+
+                .toggle__menu {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    header {
+        .header__wrapper {
+            nav {
+                .toggle__menu {
+                    .burger {
+                        scale: 0.85;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 425px) {
+
+    header {
+        .header__wrapper {
+            nav {
+                .toggle__menu {
+                    .burger {
+                        scale: 0.7;
+                    }
+                }
+            }
         }
     }
 
