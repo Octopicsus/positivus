@@ -57,7 +57,7 @@ $mainWrapper-width-mobile: 100%;
 
 
 h1 {
-    font-size: clamp(2.25rem, 1.5147rem + 3.1373vw, 3.75rem);
+    font-size  : clamp(2.25rem, 1.5147rem + 3.1373vw, 3.75rem);
     font-family: $brandFont-M;
     line-height: 130%;
 }
@@ -91,7 +91,7 @@ body {
 button {
     padding         : 20px 76px;
     font-family     : $brandFont-R;
-    font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
+    font-size       : clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
     color           : white;
     border          : none;
     border-radius   : 14px;
@@ -329,8 +329,8 @@ header {
 
             p {
                 width        : clamp(20.938rem, 21.307vw + 15.944rem, 31.125rem);
-                font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
-                line-height: 130%;
+                font-size    : clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
+                line-height  : 130%;
                 margin-bottom: 42px;
             }
         }
@@ -340,17 +340,37 @@ header {
 
 .partners {
     @include flex-center;
-    margin-top   : 40px;
+    margin-top   : clamp(1rem, 3.137vw + 0.265rem, 2.5rem);
     margin-bottom: 140px;
 
     .partners__wrapper {
         @include flex-space-between;
-        align-items: center;
-        width      : $mainWrapper-width-web;
+        align-items   : center;
+        flex-direction: column;
+        width         : $mainWrapper-width-web;
+        overflow      : hidden;
+        gap           : clamp(0rem, 2.614vw - 0.613rem, 1.25rem);
 
-        img {
-            filter: grayscale(1);
+        marquee {
+            div {
+                width          : 100%;
+                display        : flex;
+                justify-content: space-between;
+                gap            : clamp(1.25rem, 3.922vw + 0.331rem, 3.125rem);
+
+                img {
+
+                    filter: grayscale(1);
+                }
+            }
         }
+
+        .partners__marquee02 {
+            display: none;
+            opacity: 0.35;
+        }
+
+
     }
 }
 
@@ -1268,6 +1288,23 @@ footer {
             }
         }
     }
+
+    .partners {
+        .partners__wrapper {
+
+            marquee {
+                div {
+                    img {
+                        scale: 0.9;
+                    }
+                }
+            }
+
+            .partners__marquee02 {
+                display: flex;
+            }
+        }
+    }
 }
 
 
@@ -1301,13 +1338,26 @@ footer {
         }
     }
 
-    .brand__message{
-        .brand__message__wrapper{
-            .brand__message__descr{
-                img{
-                    width: 100%;
-                    margin: 0;
+    .brand__message {
+        .brand__message__wrapper {
+            .brand__message__descr {
+                img {
+                    width        : 100%;
+                    margin       : 0;
                     margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .partners {
+        .partners__wrapper {
+
+            marquee {
+                div {
+                    img {
+                        scale: 0.7;
+                    }
                 }
             }
         }
