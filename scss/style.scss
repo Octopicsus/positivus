@@ -28,10 +28,11 @@ $mainWrapper-width-mobile: 100%;
     justify-content: space-between;
 }
 
+
 @mixin title-layout {
     display      : flex;
     align-items  : center;
-    margin-bottom: 80px;
+    margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 
     h2 {
         padding         : 8px 12px;
@@ -44,6 +45,34 @@ $mainWrapper-width-mobile: 100%;
         width: 580px;
     }
 }
+
+
+@mixin title-layout-mobile {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-bottom : clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+
+    h2 {
+        padding         : 8px 12px;
+        border-radius   : 8px;
+        background-color: $brandColor-Green;
+        margin-right    : 0;
+        margin-bottom   : 30px;
+    }
+
+    p {
+        text-align: center;
+        width     : clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    }
+}
+
+
+
+
+
+
+
 
 @mixin mobile-wrapper {
     width  : 100%;
@@ -76,7 +105,7 @@ h4 {
 }
 
 p {
-    font-size  : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+    font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
     font-family: $brandFont-R;
     line-height: 130%;
 }
@@ -127,7 +156,7 @@ header {
         align-items: center;
         width      : $mainWrapper-width-web;
 
-        img{
+        img {
             z-index: 9;
         }
 
@@ -264,16 +293,16 @@ header {
                     top             : 0;
                     right           : 0;
                     width           : 100%;
-                    height          : calc(100vh - clamp(0rem, 5.974vw - 1.381rem, 2.875rem));
+                    height          : 100vh;
                     background-color: white;
                     transform       : translateX(100%);
                     transition      : .3s;
 
 
                     .toggle__list {
-                        margin-top: 40%;
-                        display: grid;
-                        gap    : 38px;
+                       /*  margin-top: 40%; */
+                        display   : grid;
+                        gap       : 38px;
 
                         li {
                             margin-left: 4px;
@@ -372,8 +401,6 @@ header {
             display: none;
             opacity: 0.35;
         }
-
-
     }
 }
 
@@ -423,7 +450,7 @@ header {
                     }
                 }
 
-                section {
+                div {
                     display    : flex;
                     align-items: center;
                     cursor     : pointer;
@@ -1251,6 +1278,13 @@ footer {
             @include mobile-wrapper;
         }
     }
+
+    .services{
+        .services__wrapper{
+            width: $mainWrapper-width-mobile;
+            @include mobile-wrapper;
+        }
+    }
 }
 
 
@@ -1305,6 +1339,14 @@ footer {
 
             .partners__marquee02 {
                 display: flex;
+            }
+        }
+    }
+
+    .services{
+        .services__wrapper{
+            .services__title{
+                @include title-layout-mobile;
             }
         }
     }

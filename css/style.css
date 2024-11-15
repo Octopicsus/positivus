@@ -158,7 +158,7 @@ h4 {
 }
 
 p {
-  font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+  font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
   font-family: "Space Gratesk R";
   line-height: 130%;
 }
@@ -323,13 +323,13 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle {
   top: 0;
   right: 0;
   width: 100%;
-  height: calc(100vh - clamp(0rem, 5.974vw - 1.381rem, 2.875rem));
+  height: 100vh;
   background-color: white;
   transform: translateX(100%);
   transition: 0.3s;
 }
 header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list {
-  margin-top: 40%;
+  /*  margin-top: 40%; */
   display: grid;
   gap: 38px;
 }
@@ -428,7 +428,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .services .services__wrapper .services__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .services .services__wrapper .services__title h2 {
   padding: 8px 12px;
@@ -470,18 +470,18 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   border-radius: 8px;
   padding: 2px 8px;
 }
-.services .services__wrapper .services__cards__wrapper .services__card section {
+.services .services__wrapper .services__cards__wrapper .services__card div {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.services .services__wrapper .services__cards__wrapper .services__card section a {
+.services .services__wrapper .services__cards__wrapper .services__card div a {
   font-size: 20px;
   margin-left: 16px;
   text-decoration: none;
   color: rgb(25, 26, 35);
 }
-.services .services__wrapper .services__cards__wrapper .services__card section:hover {
+.services .services__wrapper .services__cards__wrapper .services__card div:hover {
   opacity: 0.7;
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(2), .services .services__wrapper .services__cards__wrapper .services__card:nth-child(5) {
@@ -552,7 +552,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .studies .studies__wrapper .studies__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .studies .studies__wrapper .studies__title h2 {
   padding: 8px 12px;
@@ -615,7 +615,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .process .process__wrapper .process__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .process .process__wrapper .process__title h2 {
   padding: 8px 12px;
@@ -731,7 +731,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .team .team__wrapper .team__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .team .team__wrapper .team__title h2 {
   padding: 8px 12px;
@@ -823,7 +823,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .testimonials .testimonials__wrapper .testimonials__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .testimonials .testimonials__wrapper .testimonials__title h2 {
   padding: 8px 12px;
@@ -960,7 +960,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .contact .contact__wrapper .contact__title {
   display: flex;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
 .contact .contact__wrapper .contact__title h2 {
   padding: 8px 12px;
@@ -1196,6 +1196,11 @@ footer .footer .footer__rights a:hover {
     width: 100%;
     padding: 0 20px;
   }
+  .services .services__wrapper {
+    width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 @media (max-width: 1140px) {
   header .header__wrapper img {
@@ -1223,6 +1228,23 @@ footer .footer .footer__rights a:hover {
   }
   .partners .partners__wrapper .partners__marquee02 {
     display: flex;
+  }
+  .services .services__wrapper .services__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+  }
+  .services .services__wrapper .services__title h2 {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgb(185, 255, 102);
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .services .services__wrapper .services__title p {
+    text-align: center;
+    width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
   }
 }
 @media (max-width: 768px) {
