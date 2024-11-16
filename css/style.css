@@ -158,9 +158,9 @@ h4 {
 }
 
 p {
-  font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
+  font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
   font-family: "Space Gratesk R";
-  line-height: 130%;
+  line-height: 140%;
 }
 
 body {
@@ -385,8 +385,8 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 .brand__message .brand__message__wrapper .brand__message__descr p {
   width: clamp(20.938rem, 21.307vw + 15.944rem, 31.125rem);
-  font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
-  line-height: 130%;
+  font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
+  line-height: 140%;
   margin-bottom: 42px;
 }
 
@@ -590,6 +590,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   color: white;
   font-size: 18px;
   margin-bottom: 26px;
+  line-height: 140%;
 }
 .studies .studies__wrapper .studies__examples .studies__example:first-child {
   padding-left: 0;
@@ -1212,19 +1213,18 @@ footer .footer .footer__rights a:hover {
   .studies .studies__wrapper {
     width: 100%;
     overflow: hidden;
-    padding-left: 20px;
   }
   .studies .studies__wrapper .studies__examples {
     background-color: transparent;
     border-radius: 0;
     gap: clamp(1.25rem, 3.922vw + 0.331rem, 3.125rem);
     padding: clamp(0rem, 9.15vw - 2.145rem, 4.375rem);
-    padding-left: 0;
+    padding-left: 20px;
   }
   .studies .studies__wrapper .studies__examples .studies__example {
     background-color: rgb(25, 26, 35);
     border: none;
-    padding: 50px 40px;
+    padding: 40px 40px;
     border-radius: 45px;
   }
   .studies .studies__wrapper .studies__examples .studies__example p {
@@ -1284,6 +1284,7 @@ footer .footer .footer__rights a:hover {
   .services .services__wrapper .services__title p {
     text-align: center;
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    line-height: 140%;
   }
   .services .services__wrapper .services__cards__wrapper {
     grid-template-columns: 1fr;
@@ -1304,6 +1305,7 @@ footer .footer .footer__rights a:hover {
   .studies .studies__wrapper .studies__title p {
     text-align: center;
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    line-height: 140%;
   }
 }
 @media (max-width: 768px) {

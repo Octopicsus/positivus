@@ -71,6 +71,7 @@ $mainWrapper-width-mobile: 100%;
     p {
         text-align: center;
         width     : clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+        line-height: 140%;
     }
 }
 
@@ -105,9 +106,9 @@ h4 {
 
 
 p {
-    font-size  : clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
+    font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
     font-family: $brandFont-R;
-    line-height: 130%;
+    line-height: 140%;
 }
 
 
@@ -369,8 +370,8 @@ header {
 
             p {
                 width        : clamp(20.938rem, 21.307vw + 15.944rem, 31.125rem);
-                font-size    : clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
-                line-height  : 130%;
+                font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
+                line-height  : 140%;
                 margin-bottom: 42px;
             }
         }
@@ -588,12 +589,14 @@ header {
                 display       : flex;
                 flex-direction: column;
                 box-sizing    : border-box;
+              
 
                 p {
                     width        : 286px;
                     color        : white;
                     font-size    : 18px;
                     margin-bottom: 26px;
+                    line-height: 140%;
                 }
 
                 &:first-child {
@@ -1301,21 +1304,19 @@ footer {
         .studies__wrapper {
             width       : $mainWrapper-width-mobile;
             overflow    : hidden;
-            padding-left: 20px;
 
             .studies__examples {
                 background-color: transparent;
                 border-radius   : 0;
                 gap             : clamp(1.25rem, 3.922vw + 0.331rem, 3.125rem);
                 padding         : clamp(0rem, 9.15vw - 2.145rem, 4.375rem);
-                padding-left    : 0;
-
+                padding-left    : 20px;
 
                 .studies__example {
                     background-color: $brandColor-Black;
                     border          : none;
-                    padding         : 50px 40px;
-                    border-radius   : 45px; 
+                    padding         : 40px 40px;
+                    border-radius   : 45px;
 
                     p {
                         width    : clamp(15.625rem, 4.706vw + 14.522rem, 17.875rem);
