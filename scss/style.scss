@@ -753,16 +753,16 @@ header {
                         &::before {
                             content         : '';
                             position        : absolute;
-                            width           : 22px;
-                            height          : 5px;
+                            width           : clamp(0.75rem, 1.307vw + 0.444rem, 1.375rem);
+                            height          : clamp(0.188rem, 0.261vw + 0.126rem, 0.313rem);
                             background-color: $brandColor-Black;
                         }
 
                         &::after {
                             content         : '';
                             position        : absolute;
-                            width           : 22px;
-                            height          : 5px;
+                            width           : clamp(0.75rem, 1.307vw + 0.444rem, 1.375rem);
+                            height          : clamp(0.188rem, 0.261vw + 0.126rem, 0.313rem);
                             background-color: $brandColor-Black;
                             transform       : rotate(90deg);
                             transition      : .3s;
