@@ -66,11 +66,41 @@ $mainWrapper-width-mobile: 100%;
         background-color: $brandColor-Green;
         margin-right    : 0;
         margin-bottom   : 30px;
+        text-align      : center;
     }
 
     p {
-        text-align: center;
-        width     : clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+        text-align : center;
+        width      : clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+        line-height: 140%;
+    }
+}
+
+@mixin title-layout-mobile-span {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    margin-bottom : clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+
+    span {
+        padding         : 4px 12px;
+        border-radius   : 8px;
+        background-color: $brandColor-Green;
+    }
+
+    h2 {
+        display         : block;
+        width           : clamp(15rem, 23.529vw + 9.485rem, 26.25rem);
+        margin-right    : 0;
+        margin-bottom   : 30px;
+        text-align      : center;
+        background-color: transparent;
+        line-height     : 150%;
+    }
+
+    p {
+        text-align : center;
+        width      : clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
         line-height: 140%;
     }
 }
@@ -106,7 +136,7 @@ h4 {
 
 
 p {
-    font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
+    font-size  : clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
     font-family: $brandFont-R;
     line-height: 140%;
 }
@@ -370,7 +400,7 @@ header {
 
             p {
                 width        : clamp(20.938rem, 21.307vw + 15.944rem, 31.125rem);
-                font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
+                font-size    : clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
                 line-height  : 140%;
                 margin-bottom: 42px;
             }
@@ -589,14 +619,14 @@ header {
                 display       : flex;
                 flex-direction: column;
                 box-sizing    : border-box;
-              
+
 
                 p {
                     width        : 286px;
                     color        : white;
                     font-size    : 18px;
                     margin-bottom: 26px;
-                    line-height: 140%;
+                    line-height  : 140%;
                 }
 
                 &:first-child {
@@ -638,6 +668,10 @@ header {
 
         .process__title {
             @include title-layout;
+
+            h2 {
+                width: clamp(14.125rem, 24.837vw + 8.304rem, 26rem);
+            }
 
             p {
                 width: 292px;
@@ -688,8 +722,8 @@ header {
 
                     .checkbox__card {
                         margin-left: auto;
-                        width      : 58px;
-                        height     : 58px;
+                        width      : clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
+                        height     : clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
                         z-index    : 10;
                         opacity    : 0;
                         cursor     : pointer;
@@ -703,8 +737,8 @@ header {
                     }
 
                     .card__open {
-                        width           : 58px;
-                        height          : 58px;
+                        width           : clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
+                        height          : clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
                         background-color: white;
                         border-radius   : 29px;
                         border          : 1px solid $brandColor-Black;
@@ -1302,8 +1336,12 @@ footer {
 
     .studies {
         .studies__wrapper {
-            width       : $mainWrapper-width-mobile;
-            overflow    : hidden;
+            width   : $mainWrapper-width-mobile;
+            overflow: hidden;
+
+            .studies__title {
+                padding-left: 20px;
+            }
 
             .studies__examples {
                 background-color: transparent;
@@ -1329,6 +1367,32 @@ footer {
 
                     &:last-child {
                         padding-right: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .process {
+        .process__wrapper {
+            @include mobile-wrapper;
+
+            .process__cards {
+                .process__card {
+                    padding: clamp(1.875rem, 1.307vw + 1.569rem, 2.5rem) clamp(1.875rem, 3.922vw + 0.956rem, 3.75rem);
+
+                    .process__title__card {
+                        h1 {
+                            margin-right: clamp(2.125rem, -1.83vw + 2.554rem, 1.25rem);
+                            font-size   : clamp(1.875rem, 0.9559rem + 3.9216vw, 3.75rem);
+                        }
+
+                        h3 {
+                            width      : clamp(17.375rem, 46.013vw, 39.375rem);
+                            font-size  : clamp(1.125rem, 0.7574rem + 1.5686vw, 1.875rem);
+                            white-space: wrap;
+                            line-height: 140%;
+                        }
                     }
                 }
             }
@@ -1422,6 +1486,14 @@ footer {
             }
         }
     }
+
+    .process {
+        .process__wrapper {
+            .process__title {
+                @include title-layout-mobile-span;
+            }
+        }
+    }
 }
 
 
@@ -1486,6 +1558,31 @@ footer {
             }
         }
     }
+
+    .process {
+        .process__wrapper {
+
+
+            .process__cards {
+                .process__card {
+
+
+                    .process__title__card {
+
+                        h1 {
+                            margin-right: 14px;
+                        }
+
+
+                        h3 {
+                            font-size: 17px;
+                            width    : 210px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -1521,6 +1618,46 @@ footer {
                 div {
                     img {
                         scale: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .studies {
+        .studies__wrapper {
+            .studies__examples {
+                gap: 14px;
+
+            }
+        }
+    }
+
+
+    .process {
+        .process__wrapper {
+
+
+            .process__cards {
+
+                .process__card {
+
+
+                    .process__title__card {
+
+                        h1 {
+                            margin-right: 10px;
+                            font-size   : 28px;
+                        }
+
+
+                        h3 {
+                            font-size  : 17px;
+                            width      : 180px;
+                            font-size  : 15px;
+                            line-height: 120%;
+                        }
                     }
                 }
             }

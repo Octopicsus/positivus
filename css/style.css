@@ -636,6 +636,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .process .process__wrapper .process__title p {
   width: 580px;
 }
+.process .process__wrapper .process__title h2 {
+  width: clamp(14.125rem, 24.837vw + 8.304rem, 26rem);
+}
 .process .process__wrapper .process__title p {
   width: 292px;
 }
@@ -675,8 +678,8 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 .process .process__wrapper .process__cards .process__card .process__title__card .checkbox__card {
   margin-left: auto;
-  width: 58px;
-  height: 58px;
+  width: clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
+  height: clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
   z-index: 10;
   opacity: 0;
   cursor: pointer;
@@ -685,8 +688,8 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   transform: rotate(0deg);
 }
 .process .process__wrapper .process__cards .process__card .process__title__card .card__open {
-  width: 58px;
-  height: 58px;
+  width: clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
+  height: clamp(1.875rem, 3.66vw + 1.017rem, 3.625rem);
   background-color: white;
   border-radius: 29px;
   border: 1px solid rgb(25, 26, 35);
@@ -1214,6 +1217,9 @@ footer .footer .footer__rights a:hover {
     width: 100%;
     overflow: hidden;
   }
+  .studies .studies__wrapper .studies__title {
+    padding-left: 20px;
+  }
   .studies .studies__wrapper .studies__examples {
     background-color: transparent;
     border-radius: 0;
@@ -1236,6 +1242,23 @@ footer .footer .footer__rights a:hover {
   }
   .studies .studies__wrapper .studies__examples .studies__example:last-child {
     padding-right: 40px;
+  }
+  .process .process__wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .process .process__wrapper .process__cards .process__card {
+    padding: clamp(1.875rem, 1.307vw + 1.569rem, 2.5rem) clamp(1.875rem, 3.922vw + 0.956rem, 3.75rem);
+  }
+  .process .process__wrapper .process__cards .process__card .process__title__card h1 {
+    margin-right: clamp(2.125rem, -1.83vw + 2.554rem, 1.25rem);
+    font-size: clamp(1.875rem, 0.9559rem + 3.9216vw, 3.75rem);
+  }
+  .process .process__wrapper .process__cards .process__card .process__title__card h3 {
+    width: clamp(17.375rem, 46.013vw, 39.375rem);
+    font-size: clamp(1.125rem, 0.7574rem + 1.5686vw, 1.875rem);
+    white-space: wrap;
+    line-height: 140%;
   }
 }
 @media (max-width: 1140px) {
@@ -1280,6 +1303,7 @@ footer .footer .footer__rights a:hover {
     background-color: rgb(185, 255, 102);
     margin-right: 0;
     margin-bottom: 30px;
+    text-align: center;
   }
   .services .services__wrapper .services__title p {
     text-align: center;
@@ -1301,8 +1325,34 @@ footer .footer .footer__rights a:hover {
     background-color: rgb(185, 255, 102);
     margin-right: 0;
     margin-bottom: 30px;
+    text-align: center;
   }
   .studies .studies__wrapper .studies__title p {
+    text-align: center;
+    width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    line-height: 140%;
+  }
+  .process .process__wrapper .process__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+  }
+  .process .process__wrapper .process__title span {
+    padding: 4px 12px;
+    border-radius: 8px;
+    background-color: rgb(185, 255, 102);
+  }
+  .process .process__wrapper .process__title h2 {
+    display: block;
+    width: clamp(15rem, 23.529vw + 9.485rem, 26.25rem);
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: transparent;
+    line-height: 150%;
+  }
+  .process .process__wrapper .process__title p {
     text-align: center;
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
     line-height: 140%;
@@ -1333,6 +1383,13 @@ footer .footer .footer__rights a:hover {
   .services .services__wrapper .services__proposal .services__proposal__title .btn__short {
     display: block;
   }
+  .process .process__wrapper .process__cards .process__card .process__title__card h1 {
+    margin-right: 14px;
+  }
+  .process .process__wrapper .process__cards .process__card .process__title__card h3 {
+    font-size: 17px;
+    width: 210px;
+  }
 }
 @media (max-width: 425px) {
   header .header__wrapper nav .toggle__menu .burger {
@@ -1345,5 +1402,18 @@ footer .footer .footer__rights a:hover {
   }
   .partners .partners__wrapper marquee div img {
     scale: 0.7;
+  }
+  .studies .studies__wrapper .studies__examples {
+    gap: 14px;
+  }
+  .process .process__wrapper .process__cards .process__card .process__title__card h1 {
+    margin-right: 10px;
+    font-size: 28px;
+  }
+  .process .process__wrapper .process__cards .process__card .process__title__card h3 {
+    font-size: 17px;
+    width: 180px;
+    font-size: 15px;
+    line-height: 120%;
   }
 }
