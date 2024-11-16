@@ -167,11 +167,14 @@ body {
   font-family: "Space Gratesk R";
   font-size: 20px;
 }
+body:has(.toggle__checkbox:checked) {
+  overflow: hidden;
+}
 
 button {
   padding: 20px 76px;
   font-family: "Space Gratesk R";
-  font-size: clamp(1rem, 0.8775rem + 0.5229vw, 1.25rem);
+  font-size: clamp(0.9375rem, 0.7843rem + 0.6536vw, 1.25rem);
   color: white;
   border: none;
   border-radius: 14px;
@@ -185,6 +188,7 @@ button:hover {
 }
 button:hover span {
   color: rgb(185, 255, 102);
+  white-space: nowrap;
 }
 
 header {
@@ -329,7 +333,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle {
   transition: 0.3s;
 }
 header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list {
-  /*  margin-top: 40%; */
+  margin-top: 40%;
   display: grid;
   gap: 38px;
 }
@@ -442,17 +446,17 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .services .services__wrapper .services__cards__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 100px;
+  gap: clamp(1.25rem, 2.614vw + 0.637rem, 2.5rem);
+  margin-bottom: clamp(4.375rem, 3.922vw + 3.456rem, 6.25rem);
 }
 .services .services__wrapper .services__cards__wrapper .services__card {
-  padding: 50px;
+  padding: clamp(1.563rem, 3.268vw + 0.797rem, 3.125rem);
   background-color: rgb(243, 243, 243);
   border: rgb(25, 26, 35) solid 2px;
   border-radius: 45px;
   background-repeat: no-repeat;
   background-position: 88% center;
-  background-size: 210px 170px;
+  background-size: clamp(10.125rem, 28.916vw - 7.477rem, 13.125rem);
   box-shadow: 0px 4px 0px 0px rgb(25, 26, 35);
   transition: 0.3s;
 }
@@ -525,15 +529,19 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   background-color: rgb(243, 243, 243);
 }
 .services .services__wrapper .services__proposal .services__proposal__title {
-  padding: 60px;
+  padding: clamp(1.563rem, 3.268vw + 0.797rem, 3.125rem);
 }
 .services .services__wrapper .services__proposal .services__proposal__title h3 {
-  margin-bottom: 26px;
+  margin-bottom: clamp(1.25rem, 0.784vw + 1.066rem, 1.625rem);
+  width: clamp(17.5rem, 28.758vw + 10.76rem, 31.25rem);
 }
 .services .services__wrapper .services__proposal .services__proposal__title p {
   line-height: 130%;
-  width: 500px;
-  margin-bottom: 26px;
+  width: clamp(17.5rem, 28.758vw + 10.76rem, 31.25rem);
+  margin-bottom: clamp(1.25rem, 0.784vw + 1.066rem, 1.625rem);
+}
+.services .services__wrapper .services__proposal .services__proposal__title .btn__short {
+  display: none;
 }
 .services .services__wrapper .services__proposal img {
   position: absolute;
@@ -1212,6 +1220,9 @@ footer .footer .footer__rights a:hover {
   header .header__wrapper nav .toggle__menu {
     display: block;
   }
+  .services .services__wrapper .services__proposal img {
+    width: clamp(12.5rem, 18.51vw + 8.162rem, 22.438rem);
+  }
 }
 @media (max-width: 920px) {
   .brand__message .brand__message__wrapper .brand__message__descr {
@@ -1246,10 +1257,34 @@ footer .footer .footer__rights a:hover {
     text-align: center;
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
   }
+  .services .services__wrapper .services__cards__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 768px) {
   header .header__wrapper nav .toggle__menu .burger {
     scale: 0.85;
+  }
+  .services .services__wrapper .services__cards__wrapper .services__card {
+    background-size: 150px;
+    background-position: 80% 72%;
+  }
+  .services .services__wrapper .services__proposal img {
+    display: none;
+  }
+}
+@media (max-width: 528px) {
+  .services .services__wrapper .services__cards__wrapper .services__card div a {
+    display: none;
+  }
+  .services .services__wrapper .services__proposal {
+    display: flex;
+  }
+  .services .services__wrapper .services__proposal .services__proposal__title .btn__long {
+    display: none;
+  }
+  .services .services__wrapper .services__proposal .services__proposal__title .btn__short {
+    display: block;
   }
 }
 @media (max-width: 425px) {
