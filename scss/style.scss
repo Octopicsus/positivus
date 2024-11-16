@@ -17,6 +17,7 @@ $mainWrapper-width-mobile: 100%;
 
 
 
+
 @mixin flex-center {
     display        : flex;
     justify-content: center;
@@ -83,20 +84,24 @@ h1 {
     line-height: 130%;
 }
 
+
 h2 {
     font-size  : clamp(2.25rem, 2.1275rem + 0.5229vw, 2.5rem);
     font-family: $brandFont-M;
 }
+
 
 h3 {
     font-size  : clamp(1.625rem, 1.5025rem + 0.5229vw, 1.875rem);
     font-family: $brandFont-M;
 }
 
+
 h4 {
     font-size  : clamp(1.125rem, 1.0637rem + 0.2614vw, 1.25rem);
     font-family: $brandFont-M;
 }
+
 
 p {
     font-size  : clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
@@ -104,37 +109,39 @@ p {
     line-height: 130%;
 }
 
+
 body {
     font-family: $brandFont-R;
     font-size  : 20px;
 
-    &:has(.toggle__checkbox:checked){
+    &:has(.toggle__checkbox:checked) {
         overflow: hidden;
     }
 }
 
+
 button {
     padding         : 20px 76px;
     font-family     : $brandFont-R;
-    font-size: clamp(0.9375rem, 0.7843rem + 0.6536vw, 1.25rem);
+    font-size       : clamp(0.9375rem, 0.7843rem + 0.6536vw, 1.25rem);
     color           : white;
     border          : none;
     border-radius   : 14px;
     background-color: $brandColor-Black;
     transition      : .3s;
     cursor          : pointer;
-    
 
     &:hover {
         background-color: $brandColor-DarkGrey;
         scale           : 0.98;
 
         span {
-            color: $brandColor-Green;
+            color      : $brandColor-Green;
             white-space: nowrap;
         }
     }
 }
+
 
 
 
@@ -542,7 +549,7 @@ header {
                     margin-bottom: clamp(1.25rem, 0.784vw + 1.066rem, 1.625rem);
                 }
 
-                .btn__short{
+                .btn__short {
                     display: none;
                 }
             }
@@ -1267,8 +1274,6 @@ footer {
 
 
 
-
-
 @media (max-width: 1274px) {
 
     header {
@@ -1396,8 +1401,8 @@ footer {
                 }
             }
 
-            .services__proposal{
-                img{
+            .services__proposal {
+                img {
                     display: none;
                 }
             }
@@ -1419,15 +1424,15 @@ footer {
                 }
             }
 
-            .services__proposal{
+            .services__proposal {
                 display: flex;
 
-                .services__proposal__title{
-                    .btn__long{
+                .services__proposal__title {
+                    .btn__long {
                         display: none;
                     }
 
-                    .btn__short{
+                    .btn__short {
                         display: block;
                     }
                 }
@@ -1474,8 +1479,4 @@ footer {
             }
         }
     }
-
-
-
-
 }
