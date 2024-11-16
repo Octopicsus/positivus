@@ -16,6 +16,7 @@ $mainWrapper-width-web   : 1234px;
 $mainWrapper-width-mobile: 100%;
 
 
+//---------------------------------------------
 
 
 @mixin mobile-wrapper {
@@ -29,6 +30,7 @@ $mainWrapper-width-mobile: 100%;
     justify-content: center;
     align-items    : center;
 }
+
 
 @mixin flex-space-between {
     display        : flex;
@@ -75,6 +77,7 @@ $mainWrapper-width-mobile: 100%;
         line-height: 140%;
     }
 }
+
 
 @mixin title-layout-mobile-span {
     display       : flex;
@@ -336,7 +339,6 @@ header {
                     background-color: white;
                     transform       : translateX(100%);
                     transition      : .3s;
-
 
                     .toggle__list {
                         margin-top: 40%;
@@ -619,7 +621,6 @@ header {
                 display       : flex;
                 flex-direction: column;
                 box-sizing    : border-box;
-
 
                 p {
                     width        : 286px;
@@ -1452,7 +1453,6 @@ footer {
 
     .partners {
         .partners__wrapper {
-
             marquee {
                 div {
                     img {
@@ -1561,18 +1561,13 @@ footer {
 
     .process {
         .process__wrapper {
-
-
             .process__cards {
                 .process__card {
-
-
                     .process__title__card {
 
                         h1 {
                             margin-right: 14px;
                         }
-
 
                         h3 {
                             font-size: 17px;
@@ -1637,20 +1632,14 @@ footer {
 
     .process {
         .process__wrapper {
-
-
             .process__cards {
-
                 .process__card {
-
-
                     .process__title__card {
 
                         h1 {
                             margin-right: 10px;
                             font-size   : 28px;
                         }
-
 
                         h3 {
                             font-size  : 17px;
