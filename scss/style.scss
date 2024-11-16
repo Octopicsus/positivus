@@ -43,6 +43,10 @@ $mainWrapper-width-mobile: 100%;
     align-items  : center;
     margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 
+    span {
+        padding: 0;
+    }
+
     h2 {
         padding         : 8px 12px;
         border-radius   : 8px;
@@ -85,20 +89,23 @@ $mainWrapper-width-mobile: 100%;
     align-items   : center;
     margin-bottom : clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 
-    span {
-        padding         : 4px 12px;
-        border-radius   : 8px;
-        background-color: $brandColor-Green;
-    }
-
     h2 {
-        display         : block;
-        width           : clamp(15rem, 23.529vw + 9.485rem, 26.25rem);
+        display: grid;
+        justify-items: center;
+
         margin-right    : 0;
         margin-bottom   : 30px;
         text-align      : center;
         background-color: transparent;
         line-height     : 150%;
+        white-space     : wrap;
+    }
+
+    span {
+        padding         : 4px 12px;
+        border-radius   : 8px;
+        background-color: $brandColor-Green;
+
     }
 
     p {
@@ -671,7 +678,8 @@ header {
             @include title-layout;
 
             h2 {
-                width: clamp(14.125rem, 24.837vw + 8.304rem, 26rem);
+
+                white-space: nowrap;
             }
 
             p {

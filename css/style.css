@@ -434,6 +434,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
+.services .services__wrapper .services__title span {
+  padding: 0;
+}
 .services .services__wrapper .services__title h2 {
   padding: 8px 12px;
   border-radius: 8px;
@@ -562,6 +565,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
+.studies .studies__wrapper .studies__title span {
+  padding: 0;
+}
 .studies .studies__wrapper .studies__title h2 {
   padding: 8px 12px;
   border-radius: 8px;
@@ -627,6 +633,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
+.process .process__wrapper .process__title span {
+  padding: 0;
+}
 .process .process__wrapper .process__title h2 {
   padding: 8px 12px;
   border-radius: 8px;
@@ -637,7 +646,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   width: 580px;
 }
 .process .process__wrapper .process__title h2 {
-  width: clamp(14.125rem, 24.837vw + 8.304rem, 26rem);
+  white-space: nowrap;
 }
 .process .process__wrapper .process__title p {
   width: 292px;
@@ -746,6 +755,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
 }
+.team .team__wrapper .team__title span {
+  padding: 0;
+}
 .team .team__wrapper .team__title h2 {
   padding: 8px 12px;
   border-radius: 8px;
@@ -837,6 +849,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: flex;
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+}
+.testimonials .testimonials__wrapper .testimonials__title span {
+  padding: 0;
 }
 .testimonials .testimonials__wrapper .testimonials__title h2 {
   padding: 8px 12px;
@@ -974,6 +989,9 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: flex;
   align-items: center;
   margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+}
+.contact .contact__wrapper .contact__title span {
+  padding: 0;
 }
 .contact .contact__wrapper .contact__title h2 {
   padding: 8px 12px;
@@ -1338,19 +1356,20 @@ footer .footer .footer__rights a:hover {
     align-items: center;
     margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
   }
-  .process .process__wrapper .process__title span {
-    padding: 4px 12px;
-    border-radius: 8px;
-    background-color: rgb(185, 255, 102);
-  }
   .process .process__wrapper .process__title h2 {
-    display: block;
-    width: clamp(15rem, 23.529vw + 9.485rem, 26.25rem);
+    display: grid;
+    justify-items: center;
     margin-right: 0;
     margin-bottom: 30px;
     text-align: center;
     background-color: transparent;
     line-height: 150%;
+    white-space: wrap;
+  }
+  .process .process__wrapper .process__title span {
+    padding: 4px 12px;
+    border-radius: 8px;
+    background-color: rgb(185, 255, 102);
   }
   .process .process__wrapper .process__title p {
     text-align: center;
