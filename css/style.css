@@ -604,17 +604,17 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   border-right: none;
   padding-right: 0;
 }
-.studies .studies__wrapper .studies__examples .studies__example section {
+.studies .studies__wrapper .studies__examples .studies__example div {
   margin-top: auto;
   display: flex;
   align-items: center;
 }
-.studies .studies__wrapper .studies__examples .studies__example section a {
+.studies .studies__wrapper .studies__examples .studies__example div a {
   color: rgb(185, 255, 102);
   text-decoration: none;
   margin-right: 16px;
 }
-.studies .studies__wrapper .studies__examples .studies__example section:hover {
+.studies .studies__wrapper .studies__examples .studies__example div:hover {
   opacity: 0.7;
   cursor: pointer;
 }
