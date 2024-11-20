@@ -1069,8 +1069,8 @@ header {
             form {
                 display       : flex;
                 flex-direction: column;
-                width         : 556px;
-                padding       : 50px 100px;
+                width         : clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
+                padding       : clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
 
                 .form__radio__wrapper {
                     display      : flex;
@@ -1110,6 +1110,7 @@ header {
                         }
 
                         label {
+                            font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
                             margin-left: 14px;
                         }
                     }
@@ -1117,7 +1118,7 @@ header {
 
                 .form__title {
                     margin-bottom: 8px;
-                    font-size    : 16px;
+                    font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
                 }
 
                 .form__text__input {
@@ -1125,8 +1126,8 @@ header {
                     border-radius: 14px;
                     border       : 1px solid $brandColor-Black;
                     margin-bottom: 24px;
-                    padding-left : 30px;
-                    font-size    : 18px;
+                    padding-left : clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+                    font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
                     box-sizing   : border-box;
                     font-family  : $brandFont-R;
 
@@ -1137,12 +1138,13 @@ header {
 
                 textarea {
                     resize       : none;
-                    height       : 190px;
+                    height       : clamp(8.125rem, 7.843vw + 6.287rem, 11.875rem);
                     border-radius: 14px;
                     border       : 1px solid $brandColor-Black;
                     margin-bottom: 40px;
-                    padding      : 18px 30px;
-                    font-size    : 18px;
+                    padding      : 18px clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+                    font-size    : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+                    font-family  : $brandFont-R;
                 }
             }
         }
@@ -1427,6 +1429,12 @@ footer {
             @include mobile-wrapper;
         }
     }
+
+    .contact {
+        .contact__wrapper {
+            @include mobile-wrapper;
+        }
+    }
 }
 
 
@@ -1445,8 +1453,6 @@ footer {
             }
         }
     }
-
-
 }
 
 
@@ -1484,6 +1490,7 @@ footer {
 
 
 @media(max-width: 920px) {
+
     .brand__message {
         .brand__message__wrapper {
             .brand__message__descr {
@@ -1558,6 +1565,14 @@ footer {
             }
         }
     }
+
+    .contact {
+        .contact__wrapper {
+            .contact__title {
+                @include title-layout-mobile;
+            }
+        }
+    }
 }
 
 
@@ -1613,6 +1628,7 @@ footer {
 
 
 @media(max-width: 528px) {
+
     .services {
         .services__wrapper {
             .services__cards__wrapper {
@@ -1655,6 +1671,26 @@ footer {
                             font-size: 17px;
                             width    : 210px;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        .contact__wrapper {
+            .contact__form{
+                background-image: none;
+                display: flex;
+                justify-content: center;
+
+                form{
+                    width: 90%;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    .form__radio__wrapper{
+                        justify-content: center;
                     }
                 }
             }
@@ -1705,7 +1741,6 @@ footer {
         .studies__wrapper {
             .studies__examples {
                 gap: 14px;
-
             }
         }
     }

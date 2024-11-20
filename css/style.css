@@ -1011,8 +1011,8 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .contact .contact__wrapper .contact__form form {
   display: flex;
   flex-direction: column;
-  width: 556px;
-  padding: 50px 100px;
+  width: clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
+  padding: clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
 }
 .contact .contact__wrapper .contact__form form .form__radio__wrapper {
   display: flex;
@@ -1049,19 +1049,20 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   transform: scale(1);
 }
 .contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button label {
+  font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
   margin-left: 14px;
 }
 .contact .contact__wrapper .contact__form form .form__title {
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
 }
 .contact .contact__wrapper .contact__form form .form__text__input {
   height: 60px;
   border-radius: 14px;
   border: 1px solid rgb(25, 26, 35);
   margin-bottom: 24px;
-  padding-left: 30px;
-  font-size: 18px;
+  padding-left: clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+  font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
   box-sizing: border-box;
   font-family: "Space Gratesk R";
 }
@@ -1070,12 +1071,13 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 .contact .contact__wrapper .contact__form form textarea {
   resize: none;
-  height: 190px;
+  height: clamp(8.125rem, 7.843vw + 6.287rem, 11.875rem);
   border-radius: 14px;
   border: 1px solid rgb(25, 26, 35);
   margin-bottom: 40px;
-  padding: 18px 30px;
-  font-size: 18px;
+  padding: 18px clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+  font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+  font-family: "Space Gratesk R";
 }
 
 footer {
@@ -1288,6 +1290,10 @@ footer .footer .footer__rights a:hover {
     width: 100%;
     padding: 0 20px;
   }
+  .contact .contact__wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 @media (max-width: 1168px) {
   .team .team__wrapper {
@@ -1435,6 +1441,25 @@ footer .footer .footer__rights a:hover {
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
     line-height: 140%;
   }
+  .contact .contact__wrapper .contact__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+  }
+  .contact .contact__wrapper .contact__title h2 {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgb(185, 255, 102);
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .contact .contact__wrapper .contact__title p {
+    text-align: center;
+    width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    line-height: 140%;
+  }
 }
 @media (max-width: 790px) {
   .team .team__wrapper {
@@ -1479,6 +1504,19 @@ footer .footer .footer__rights a:hover {
   .process .process__wrapper .process__cards .process__card .process__title__card h3 {
     font-size: 17px;
     width: 210px;
+  }
+  .contact .contact__wrapper .contact__form {
+    background-image: none;
+    display: flex;
+    justify-content: center;
+  }
+  .contact .contact__wrapper .contact__form form {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contact .contact__wrapper .contact__form form .form__radio__wrapper {
+    justify-content: center;
   }
 }
 @media (max-width: 425px) {
