@@ -505,28 +505,30 @@
                 <div class="contact__form">
                     <form action="#">
 
-                        <div class="form__main_wrapper"></div>
+                        <div class="form__main_wrapper">
 
-                        <div class="form__radio__wrapper">
-                            <div class="radio__button">
-                                <input class="radio" type="radio" name="Greetings" id="hi" value="hi">
-                                <label for="hi">Say Hi</label>
+                            <div class="form__radio__wrapper">
+                                <div class="radio__button">
+                                    <input class="radio" type="radio" name="Greetings" id="hi" value="hi">
+                                    <label for="hi">Say Hi</label>
+                                </div>
+
+                                <div class="radio__button">
+                                    <input class="radio" type="radio" name="Greetings" id="quote" value="quote">
+                                    <label for="quote">Get a Quote</label>
+                                </div>
                             </div>
 
-                            <div class="radio__button">
-                                <input class="radio" type="radio" name="Greetings" id="quote" value="quote">
-                                <label for="quote">Get a Quote</label>
-                            </div>
+                            <label class="form__title" for="name">Name</label>
+                            <input class="form__text__input" type="text" name="name" id="name" placeholder="Name">
+
+                            <label class="form__title" for="email">Email*</label>
+                            <input class="form__text__input" type="text" name="email" id="email" placeholder="Email">
+
+                            <label class="form__title" for="message">Message*</label>
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+
                         </div>
-
-                        <label class="form__title" for="name">Name</label>
-                        <input class="form__text__input" type="text" name="name" id="name" placeholder="Name">
-
-                        <label class="form__title" for="email">Email*</label>
-                        <input class="form__text__input" type="text" name="email" id="email" placeholder="Email">
-
-                        <label class="form__title" for="message">Message*</label>
-                        <textarea name="message" id="message" placeholder="Message"></textarea>
 
                         <button type="submit"><span>Send Message</span></button>
 

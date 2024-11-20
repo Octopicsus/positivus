@@ -1065,86 +1065,99 @@ header {
             background-image   : url(/img/Illustration_02.svg);
             background-repeat  : no-repeat;
             background-position: right;
+            transition         : .3s;
 
             form {
                 display       : flex;
                 flex-direction: column;
                 width         : clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
-                padding       : clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
 
-                .form__radio__wrapper {
-                    display      : flex;
-                    gap          : 34px;
-                    margin-bottom: 40px;
+                .form__main_wrapper {
+                    display       : flex;
+                    flex-direction: column;
+                    width         : clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
+                    padding       : clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
 
-                    .radio__button {
-                        display    : flex;
-                        align-items: center;
+                    .form__radio__wrapper {
+                        display      : flex;
+                        gap          : 34px;
+                        margin-bottom: 40px;
 
-                        .radio {
-                            width           : 28px;
-                            height          : 28px;
-                            appearance      : none;
-                            background-color: #fff;
-                            border-radius   : 50%;
-                            margin          : 0;
-                            font            : inherit;
-                            color           : currentColor;
-                            border          : 1px solid $brandColor-Black;
-                            display         : grid;
-                            place-content   : center;
+                        .radio__button {
+                            display    : flex;
+                            align-items: center;
 
-                            &::before {
-                                content         : "";
-                                width           : 16px;
-                                height          : 16px;
+                            .radio {
+                                width           : 28px;
+                                height          : 28px;
+                                appearance      : none;
+                                background-color: #fff;
                                 border-radius   : 50%;
-                                background-color: $brandColor-Green;
-                                transform       : scale(0);
-                                transition      : 160ms transform ease-in-out;
+                                margin          : 0;
+                                font            : inherit;
+                                color           : currentColor;
+                                border          : 1px solid $brandColor-Black;
+                                display         : grid;
+                                place-content   : center;
+
+                                &::before {
+                                    content         : "";
+                                    width           : 16px;
+                                    height          : 16px;
+                                    border-radius   : 50%;
+                                    background-color: $brandColor-Green;
+                                    transform       : scale(0);
+                                    transition      : 160ms transform ease-in-out;
+                                }
+
+                                &:checked::before {
+                                    transform: scale(1);
+                                }
                             }
 
-                            &:checked::before {
-                                transform: scale(1);
+                            label {
+                                font-size  : clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
+                                margin-left: 14px;
                             }
                         }
+                    }
 
-                        label {
-                            font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
-                            margin-left: 14px;
+                    .form__title {
+                        margin-bottom: 8px;
+                        font-size    : clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
+                    }
+
+                    .form__text__input {
+                        height       : 60px;
+                        border-radius: 14px;
+                        border       : 1px solid $brandColor-Black;
+                        margin-bottom: 24px;
+                        padding-left : clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+                        font-size    : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+                        box-sizing   : border-box;
+                        font-family  : $brandFont-R;
+
+                        &::placeholder {
+                            color: rgb(137, 137, 137);
                         }
+                    }
+
+                    textarea {
+                        resize       : none;
+                        height       : clamp(8.125rem, 7.843vw + 6.287rem, 11.875rem);
+                        border-radius: 14px;
+                        border       : 1px solid $brandColor-Black;
+                        margin-bottom: 40px;
+                        padding      : 18px clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
+                        font-size    : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
+                        font-family  : $brandFont-R;
                     }
                 }
 
-                .form__title {
-                    margin-bottom: 8px;
-                    font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
-                }
-
-                .form__text__input {
-                    height       : 60px;
-                    border-radius: 14px;
-                    border       : 1px solid $brandColor-Black;
-                    margin-bottom: 24px;
-                    padding-left : clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
-                    font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
-                    box-sizing   : border-box;
-                    font-family  : $brandFont-R;
-
-                    &::placeholder {
-                        color: rgb(137, 137, 137);
-                    }
-                }
-
-                textarea {
-                    resize       : none;
-                    height       : clamp(8.125rem, 7.843vw + 6.287rem, 11.875rem);
-                    border-radius: 14px;
-                    border       : 1px solid $brandColor-Black;
-                    margin-bottom: 40px;
-                    padding      : 18px clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
-                    font-size    : clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
-                    font-family  : $brandFont-R;
+                button {
+                    margin-left  : clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
+                    margin-bottom: clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem);
+                    width        : clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
                 }
             }
         }
@@ -1679,18 +1692,38 @@ footer {
 
     .contact {
         .contact__wrapper {
-            .contact__form{
+            .contact__form {
+                width           : 100%;
                 background-image: none;
-                display: flex;
-                justify-content: center;
+                display         : flex;
+                justify-content : center;
+                background-color: transparent;
+                border-radius   : 0;
 
-                form{
-                    width: 90%;
-                    padding-left: 0;
-                    padding-right: 0;
+                form {
+                    width: 100%;
 
-                    .form__radio__wrapper{
-                        justify-content: center;
+                    .form__main_wrapper {
+                        background-color: $brandColor-LightGrey;
+                        border-radius   : 45px;
+                        width           : 100%;
+                        padding         : clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) 20px;
+                        box-sizing      : border-box;
+
+                        .form__radio__wrapper {
+                            justify-content: center;
+                        }
+
+                        textarea{
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    button {
+                        margin-top   : 30px;
+                        margin-left  : 0;
+                        margin-bottom: 0;
+                        width        : auto;
                     }
                 }
             }

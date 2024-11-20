@@ -1007,23 +1007,29 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   background-image: url(/img/Illustration_02.svg);
   background-repeat: no-repeat;
   background-position: right;
+  transition: 0.3s;
 }
 .contact .contact__wrapper .contact__form form {
   display: flex;
   flex-direction: column;
   width: clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
+}
+.contact .contact__wrapper .contact__form form .form__main_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
   padding: clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper {
   display: flex;
   gap: 34px;
   margin-bottom: 40px;
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper .radio__button {
   display: flex;
   align-items: center;
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper .radio__button .radio {
   width: 28px;
   height: 28px;
   appearance: none;
@@ -1036,7 +1042,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: grid;
   place-content: center;
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio::before {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper .radio__button .radio::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -1045,18 +1051,18 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   transform: scale(0);
   transition: 160ms transform ease-in-out;
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button .radio:checked::before {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper .radio__button .radio:checked::before {
   transform: scale(1);
 }
-.contact .contact__wrapper .contact__form form .form__radio__wrapper .radio__button label {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper .radio__button label {
   font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
   margin-left: 14px;
 }
-.contact .contact__wrapper .contact__form form .form__title {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__title {
   margin-bottom: 8px;
   font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
 }
-.contact .contact__wrapper .contact__form form .form__text__input {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__text__input {
   height: 60px;
   border-radius: 14px;
   border: 1px solid rgb(25, 26, 35);
@@ -1066,10 +1072,10 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   box-sizing: border-box;
   font-family: "Space Gratesk R";
 }
-.contact .contact__wrapper .contact__form form .form__text__input::placeholder {
+.contact .contact__wrapper .contact__form form .form__main_wrapper .form__text__input::placeholder {
   color: rgb(137, 137, 137);
 }
-.contact .contact__wrapper .contact__form form textarea {
+.contact .contact__wrapper .contact__form form .form__main_wrapper textarea {
   resize: none;
   height: clamp(8.125rem, 7.843vw + 6.287rem, 11.875rem);
   border-radius: 14px;
@@ -1078,6 +1084,11 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   padding: 18px clamp(1rem, 1.83vw + 0.571rem, 1.875rem);
   font-size: clamp(1rem, 0.9387rem + 0.2614vw, 1.125rem);
   font-family: "Space Gratesk R";
+}
+.contact .contact__wrapper .contact__form form button {
+  margin-left: clamp(1.25rem, 10.458vw - 1.201rem, 6.25rem);
+  margin-bottom: clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem);
+  width: clamp(18.438rem, 34.118vw + 10.441rem, 34.75rem);
 }
 
 footer {
@@ -1506,17 +1517,34 @@ footer .footer .footer__rights a:hover {
     width: 210px;
   }
   .contact .contact__wrapper .contact__form {
+    width: 100%;
     background-image: none;
     display: flex;
     justify-content: center;
+    background-color: transparent;
+    border-radius: 0;
   }
   .contact .contact__wrapper .contact__form form {
-    width: 90%;
-    padding-left: 0;
-    padding-right: 0;
+    width: 100%;
   }
-  .contact .contact__wrapper .contact__form form .form__radio__wrapper {
+  .contact .contact__wrapper .contact__form form .form__main_wrapper {
+    background-color: rgb(243, 243, 243);
+    border-radius: 45px;
+    width: 100%;
+    padding: clamp(2.5rem, 2.614vw + 1.887rem, 3.75rem) 20px;
+    box-sizing: border-box;
+  }
+  .contact .contact__wrapper .contact__form form .form__main_wrapper .form__radio__wrapper {
     justify-content: center;
+  }
+  .contact .contact__wrapper .contact__form form .form__main_wrapper textarea {
+    margin-bottom: 10px;
+  }
+  .contact .contact__wrapper .contact__form form button {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
+    width: auto;
   }
 }
 @media (max-width: 425px) {
