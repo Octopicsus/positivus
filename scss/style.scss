@@ -904,7 +904,8 @@ header {
     margin-bottom: 140px;
 
     .testimonials__wrapper {
-        width: $mainWrapper-width-web;
+        width   : $mainWrapper-width-web;
+        overflow: hidden;
 
         .testimonials__title {
             @include title-layout;
@@ -912,13 +913,14 @@ header {
 
         .testimonials__window {
             width           : 100%;
-            height          : 625px;
+            height          : clamp(36.25rem, 5.882vw + 34.871rem, 39.063rem);
             display         : flex;
             flex-direction  : column;
             background-color: $brandColor-Black;
             border-radius   : 45px;
-            padding-top     : 84px;
+            padding-top     : clamp(1.625rem, 7.582vw - 0.152rem, 5.25rem);
             box-sizing      : border-box;
+            overflow        : hidden;
 
             .testimonials__slider {
                 width          : 100%;
@@ -926,7 +928,6 @@ header {
                 justify-content: center;
                 gap            : 50px;
                 box-sizing     : border-box;
-                overflow       : hidden;
 
                 .testimonial__item {
 
@@ -935,13 +936,13 @@ header {
 
                         .testimonial__descr {
                             border       : solid $brandColor-Green 1px;
-                            padding      : 52px 48px;
+                            padding      : clamp(2.375rem, 1.83vw + 1.946rem, 3.25rem) clamp(1.563rem, 3.007vw + 0.858rem, 3rem);
                             border-radius: 45px;
 
                             p {
                                 color      : white;
-                                font-size  : 18px;
-                                width      : 502px;
+                                font-size  : clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
+                                width      : clamp(14.375rem, 43.66vw + 4.142rem, 35.25rem);
                                 line-height: 134%;
                             }
                         }
@@ -983,11 +984,10 @@ header {
             }
 
             .navigation__slider__wrapper {
-                margin-left    : auto;
-                margin-right   : auto;
+                margin         : 0 auto;
                 margin-top     : auto;
-                margin-bottom  : 68px;
-                width          : 564px;
+                margin-bottom  : clamp(3.125rem, 2.353vw + 2.574rem, 4.25rem);
+                width          : clamp(16.875rem, 38.431vw + 7.868rem, 35.25rem);
                 height         : 24px;
                 display        : flex;
                 justify-content: space-between;
@@ -1322,6 +1322,9 @@ footer {
 
 
 
+
+
+
 @media (max-width: 1274px) {
 
     header {
@@ -1418,6 +1421,12 @@ footer {
             }
         }
     }
+
+    .testimonials {
+        .testimonials__wrapper {
+            @include mobile-wrapper;
+        }
+    }
 }
 
 
@@ -1425,17 +1434,19 @@ footer {
 
     .team {
         .team__wrapper {
-            @include mobile-wrapper;
+            /* @include mobile-wrapper; */
 
             .team__cards {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            button{
+            button {
                 width: 100%;
             }
         }
     }
+
+
 }
 
 
@@ -1535,6 +1546,14 @@ footer {
     .team {
         .team__wrapper {
             .team__title {
+                @include title-layout-mobile;
+            }
+        }
+    }
+
+    .testimonials {
+        .testimonials__wrapper {
+            .testimonials__title {
                 @include title-layout-mobile;
             }
         }
@@ -1682,7 +1701,6 @@ footer {
         }
     }
 
-
     .studies {
         .studies__wrapper {
             .studies__examples {
@@ -1691,7 +1709,6 @@ footer {
             }
         }
     }
-
 
     .process {
         .process__wrapper {

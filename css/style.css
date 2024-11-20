@@ -843,6 +843,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 .testimonials .testimonials__wrapper {
   width: 1234px;
+  overflow: hidden;
 }
 .testimonials .testimonials__wrapper .testimonials__title {
   display: flex;
@@ -863,13 +864,14 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 .testimonials .testimonials__wrapper .testimonials__window {
   width: 100%;
-  height: 625px;
+  height: clamp(36.25rem, 5.882vw + 34.871rem, 39.063rem);
   display: flex;
   flex-direction: column;
   background-color: rgb(25, 26, 35);
   border-radius: 45px;
-  padding-top: 84px;
+  padding-top: clamp(1.625rem, 7.582vw - 0.152rem, 5.25rem);
   box-sizing: border-box;
+  overflow: hidden;
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider {
   width: 100%;
@@ -877,20 +879,19 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   justify-content: center;
   gap: 50px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider .testimonial__item .testimonial__item__wrapper {
   justify-content: center;
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider .testimonial__item .testimonial__item__wrapper .testimonial__descr {
   border: solid rgb(185, 255, 102) 1px;
-  padding: 52px 48px;
+  padding: clamp(2.375rem, 1.83vw + 1.946rem, 3.25rem) clamp(1.563rem, 3.007vw + 0.858rem, 3rem);
   border-radius: 45px;
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider .testimonial__item .testimonial__item__wrapper .testimonial__descr p {
   color: white;
-  font-size: 18px;
-  width: 502px;
+  font-size: clamp(0.9375rem, 0.8456rem + 0.3922vw, 1.125rem);
+  width: clamp(14.375rem, 43.66vw + 4.142rem, 35.25rem);
   line-height: 134%;
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider .testimonial__item .tooltip {
@@ -923,11 +924,10 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   margin-left: 80px;
 }
 .testimonials .testimonials__wrapper .testimonials__window .navigation__slider__wrapper {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-top: auto;
-  margin-bottom: 68px;
-  width: 564px;
+  margin-bottom: clamp(3.125rem, 2.353vw + 2.574rem, 4.25rem);
+  width: clamp(16.875rem, 38.431vw + 7.868rem, 35.25rem);
   height: 24px;
   display: flex;
   justify-content: space-between;
@@ -1284,11 +1284,14 @@ footer .footer .footer__rights a:hover {
   .team .team__wrapper .team__cards {
     gap: 20px;
   }
+  .testimonials .testimonials__wrapper {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 @media (max-width: 1168px) {
   .team .team__wrapper {
-    width: 100%;
-    padding: 0 20px;
+    /* @include mobile-wrapper; */
   }
   .team .team__wrapper .team__cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1409,6 +1412,25 @@ footer .footer .footer__rights a:hover {
     text-align: center;
   }
   .team .team__wrapper .team__title p {
+    text-align: center;
+    width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
+    line-height: 140%;
+  }
+  .testimonials .testimonials__wrapper .testimonials__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(2.5rem, 5.229vw + 1.275rem, 5rem);
+  }
+  .testimonials .testimonials__wrapper .testimonials__title h2 {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgb(185, 255, 102);
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .testimonials .testimonials__wrapper .testimonials__title p {
     text-align: center;
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
     line-height: 140%;
