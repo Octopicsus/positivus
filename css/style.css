@@ -219,7 +219,7 @@ header .header__wrapper {
   width: 1234px;
 }
 header .header__wrapper img {
-  z-index: 9;
+  z-index: 999;
 }
 header .header__wrapper nav .header__menu {
   display: flex;
@@ -1099,7 +1099,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 
 footer {
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 footer .footer__wrapper {
@@ -1130,7 +1130,7 @@ footer .footer__wrapper .footer .footer__header .footer__logo {
 }
 footer .footer__wrapper .footer .footer__header .footer__menu {
   display: flex;
-  gap: 40px;
+  column-gap: clamp(1.25rem, 10vw - 4.625rem, 2.5rem);
 }
 footer .footer__wrapper .footer .footer__header .footer__menu li a {
   font-size: 18px;
@@ -1174,6 +1174,9 @@ footer .footer__wrapper .footer .footer__main {
   margin-top: 66px;
   border-bottom: 1px solid white;
 }
+footer .footer__wrapper .footer .footer__main .footer__contact__descr {
+  margin-right: 40px;
+}
 footer .footer__wrapper .footer .footer__main .footer__contact__descr h4 {
   display: inline-block;
   padding: 4px 8px;
@@ -1208,10 +1211,11 @@ footer .footer__wrapper .footer .footer__main form input {
   border-radius: 14px;
   background-color: transparent;
   border: 1px solid white;
-  padding-left: 36px;
+  padding-left: 30px;
   font-size: 18px;
   font-family: "Space Gratesk R";
   color: white;
+  box-sizing: border-box;
 }
 footer .footer__wrapper .footer .footer__main form input::placeholder {
   color: white;
@@ -1229,10 +1233,13 @@ footer .footer__wrapper .footer__rights {
   display: flex;
   gap: 40px;
   padding: 50px 0;
-  font-size: 18px;
   color: white;
 }
+footer .footer__wrapper .footer__rights p {
+  font-size: 18px;
+}
 footer .footer__wrapper .footer__rights a {
+  font-size: 18px;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -1318,6 +1325,10 @@ footer .footer__wrapper .footer__rights a:hover {
   }
 }
 @media (max-width: 1234px) {
+  footer {
+    width: 100%;
+    background-color: rgb(25, 26, 35);
+  }
   footer .footer__wrapper {
     width: 100%;
     border-radius: 0;
@@ -1331,6 +1342,16 @@ footer .footer__wrapper .footer__rights a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
   .team .team__wrapper button {
+    width: 100%;
+  }
+  footer .footer__wrapper .footer .footer__main form {
+    flex-direction: column;
+    width: clamp(25rem, 46.296vw - 1.736rem, 31.25rem);
+  }
+  footer .footer__wrapper .footer .footer__main form input {
+    width: 100%;
+  }
+  footer .footer__wrapper .footer .footer__main form button {
     width: 100%;
   }
 }
@@ -1488,6 +1509,19 @@ footer .footer__wrapper .footer__rights a:hover {
     width: clamp(20.938rem, 32.026vw + 13.431rem, 36.25rem);
     line-height: 140%;
   }
+  footer .footer__wrapper .footer {
+    position: relative;
+  }
+  footer .footer__wrapper .footer .footer__header .footer__wrapper__socials {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 38px;
+  }
+  footer .footer__wrapper .footer .footer__main {
+    padding-bottom: 100px;
+  }
 }
 @media (max-width: 790px) {
   .team .team__wrapper {
@@ -1511,6 +1545,67 @@ footer .footer__wrapper .footer__rights a:hover {
   }
   .services .services__wrapper .services__proposal img {
     display: none;
+  }
+  footer .footer__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer .footer__wrapper .footer .footer__header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .footer__wrapper .footer .footer__header .footer__logo {
+    margin-bottom: 38px;
+  }
+  footer .footer__wrapper .footer .footer__header .footer__menu {
+    flex-direction: column;
+    row-gap: 22px;
+  }
+  footer .footer__wrapper .footer .footer__header .footer__menu li {
+    text-align: center;
+  }
+  footer .footer__wrapper .footer .footer__header .footer__menu li a {
+    text-decoration: none;
+  }
+  footer .footer__wrapper .footer .footer__main {
+    flex-direction: column;
+    margin-top: 38px;
+  }
+  footer .footer__wrapper .footer .footer__main .footer__contact__descr {
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 38px;
+    text-align: center;
+  }
+  footer .footer__wrapper .footer .footer__main .footer__contact__descr p {
+    margin-bottom: 16px;
+  }
+  footer .footer__wrapper .footer .footer__main form {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  footer .footer__wrapper .footer .footer__main form input {
+    font-size: 16px;
+    width: 100%;
+    padding-left: 20px;
+  }
+  footer .footer__wrapper .footer .footer__main form button {
+    width: 100%;
+  }
+  footer .footer__wrapper .footer__rights {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding-top: 38px;
+    padding-bottom: 30px;
+  }
+  footer .footer__wrapper .footer__rights p {
+    font-size: 16px;
+  }
+  footer .footer__wrapper .footer__rights a {
+    font-size: 16px;
+    text-decoration: none;
   }
 }
 @media (max-width: 528px) {

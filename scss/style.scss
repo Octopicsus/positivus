@@ -209,7 +209,7 @@ header {
         width      : $mainWrapper-width-web;
 
         img {
-            z-index: 9;
+            z-index: 999;
         }
 
         nav {
@@ -1168,7 +1168,7 @@ header {
 
 
 footer {
-    display        : grid;
+    display        : flex;
     justify-content: center;
 
     .footer__wrapper {
@@ -1179,7 +1179,6 @@ footer {
         padding                : 55px 60px;
         padding-bottom         : 0;
         box-sizing             : border-box;
-
 
         .footer {
             color     : white;
@@ -1200,8 +1199,8 @@ footer {
                 }
 
                 .footer__menu {
-                    display: flex;
-                    gap    : 40px;
+                    display   : flex;
+                    column-gap: clamp(1.25rem, 10vw - 4.625rem, 2.5rem);
 
                     li {
                         a {
@@ -1221,6 +1220,7 @@ footer {
                 .footer__wrapper__socials {
                     display: flex;
                     gap    : 20px;
+
 
                     .social__portal {
                         width              : 30px;
@@ -1258,6 +1258,7 @@ footer {
                 border-bottom  : 1px solid white;
 
                 .footer__contact__descr {
+                    margin-right: 40px;
 
                     h4 {
                         display         : inline-block;
@@ -1274,7 +1275,6 @@ footer {
 
                         &:last-child {
                             margin-bottom: 0;
-
                         }
                     }
                 }
@@ -1299,10 +1299,11 @@ footer {
                         border-radius   : 14px;
                         background-color: transparent;
                         border          : 1px solid white;
-                        padding-left    : 36px;
+                        padding-left    : 30px;
                         font-size       : 18px;
                         font-family     : $brandFont-R;
                         color           : white;
+                        box-sizing      : border-box;
 
                         &::placeholder {
                             color: white;
@@ -1324,13 +1325,17 @@ footer {
         }
 
         .footer__rights {
-            display            : flex;
-            gap                : 40px;
-            padding            : 50px 0;
-            font-size          : 18px;
-            color              : white;
+            display: flex;
+            gap    : 40px;
+            padding: 50px 0;
+            color  : white;
+
+            p {
+                font-size: 18px;
+            }
 
             a {
+                font-size      : 18px;
                 text-decoration: underline;
                 cursor         : pointer;
 
@@ -1462,9 +1467,12 @@ footer {
 //---------------------------------------------
 
 @media (max-width: 1234px) {
-    footer {
 
-        .footer__wrapper{
+    footer {
+        width           : 100%;
+        background-color: $brandColor-Black;
+
+        .footer__wrapper {
             width        : 100%;
             border-radius: 0;
         }
@@ -1485,6 +1493,28 @@ footer {
 
             button {
                 width: 100%;
+            }
+        }
+    }
+
+    footer {
+
+        .footer__wrapper {
+            .footer {
+                .footer__main {
+                    form {
+                        flex-direction: column;
+                        width         : clamp(25rem, 46.296vw - 1.736rem, 31.25rem);
+
+                        input {
+                            width: 100%;
+                        }
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1612,6 +1642,28 @@ footer {
             }
         }
     }
+
+    footer {
+        .footer__wrapper {
+            .footer {
+                position: relative;
+
+                .footer__header {
+                    .footer__wrapper__socials {
+                        position     : absolute;
+                        bottom       : 0;
+                        left         : 50%;
+                        transform    : translateX(-50%);
+                        margin-bottom: 38px;
+                    }
+                }
+
+                .footer__main {
+                    padding-bottom: 100px;
+                }
+            }
+        }
+    }
 }
 
 //---------------------------------------------
@@ -1661,6 +1713,86 @@ footer {
             .services__proposal {
                 img {
                     display: none;
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer__wrapper {
+            padding-left : 20px;
+            padding-right: 20px;
+
+            .footer {
+                .footer__header {
+                    flex-direction : column;
+                    justify-content: center;
+
+                    .footer__logo {
+                        margin-bottom: 38px;
+                    }
+
+                    .footer__menu {
+                        flex-direction: column;
+                        row-gap       : 22px;
+
+                        li {
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+                .footer__main {
+                    flex-direction: column;
+                    margin-top    : 38px;
+
+                    .footer__contact__descr {
+                        justify-content: center;
+                        margin         : 0;
+                        margin-bottom  : 38px;
+                        text-align     : center;
+
+                        p {
+                            margin-bottom: 16px;
+                        }
+                    }
+
+                    form {
+                        width     : 100%;
+                        padding   : 30px;
+                        box-sizing: border-box;
+
+                        input {
+                            font-size   : 16px;
+                            width       : 100%;
+                            padding-left: 20px;
+                        }
+
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .footer__rights {
+                flex-direction: column;
+                text-align    : center;
+                gap           : 16px;
+                padding-top   : 38px;
+                padding-bottom: 30px;
+
+                p {
+                    font-size: 16px;
+                }
+
+                a {
+                    font-size      : 16px;
+                    text-decoration: none;
                 }
             }
         }
