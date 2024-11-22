@@ -115,9 +115,24 @@ $mainWrapper-width-mobile: 100%;
     }
 }
 
-
 //---------------------------------------------
 
+html {
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    font-family: $brandFont-R;
+    font-size  : 20px;
+
+    &:has(.toggle__checkbox:checked) {
+        overflow: hidden;
+    }
+}
 
 h1 {
     font-size  : clamp(2.25rem, 1.5147rem + 3.1373vw, 3.75rem);
@@ -150,17 +165,6 @@ p {
     line-height: 140%;
 }
 
-
-body {
-    font-family: $brandFont-R;
-    font-size  : 20px;
-
-    &:has(.toggle__checkbox:checked) {
-        overflow: hidden;
-    }
-}
-
-
 button {
     padding         : 20px 76px;
     font-family     : $brandFont-R;
@@ -182,8 +186,6 @@ button {
         }
     }
 }
-
-
 
 //---------------------------------------------
 
@@ -1166,159 +1168,167 @@ header {
 
 
 footer {
-    @include flex-center;
+    display        : grid;
+    justify-content: center;
 
-    .footer {
+    .footer__wrapper {
         width                  : $mainWrapper-width-web;
+        background-color       : $brandColor-Black;
+        border-top-left-radius : 45px;
+        border-top-right-radius: 45px;
         padding                : 55px 60px;
         padding-bottom         : 0;
         box-sizing             : border-box;
-        border-top-left-radius : 45px;
-        border-top-right-radius: 45px;
-        background-color       : $brandColor-Black;
-        color                  : white;
 
-        .footer__header {
-            width          : 100%;
-            display        : flex;
-            justify-content: space-between;
-            align-items    : center;
 
-            .footer__logo {
-                background-image   : url(/img/brand_logo_white.svg);
-                background-repeat  : no-repeat;
-                background-position: center;
-                width              : 180px;
-                height             : 29px;
-            }
+        .footer {
+            color     : white;
+            box-sizing: border-box;
 
-            .footer__menu {
-                display: flex;
-                gap    : 40px;
+            .footer__header {
+                width          : 100%;
+                display        : flex;
+                justify-content: space-between;
+                align-items    : center;
 
-                li {
-                    a {
-                        font-size      : 18px;
-                        color          : white;
-                        text-decoration: underline;
-                        transition     : .3s;
+                .footer__logo {
+                    background-image   : url(/img/brand_logo_white.svg);
+                    background-repeat  : no-repeat;
+                    background-position: center;
+                    width              : 180px;
+                    height             : 29px;
+                }
 
-                        &:hover {
-                            text-decoration: none;
-                            opacity        : 0.8;
+                .footer__menu {
+                    display: flex;
+                    gap    : 40px;
+
+                    li {
+                        a {
+                            font-size      : 18px;
+                            color          : white;
+                            text-decoration: underline;
+                            transition     : .3s;
+
+                            &:hover {
+                                text-decoration: none;
+                                opacity        : 0.8;
+                            }
                         }
                     }
                 }
-            }
 
-            .footer__wrapper__socials {
-                display: flex;
-                gap    : 20px;
+                .footer__wrapper__socials {
+                    display: flex;
+                    gap    : 20px;
 
-                .social__portal {
-                    width              : 30px;
-                    height             : 30px;
-                    background-repeat  : no-repeat;
-                    background-position: center;
-                    transition         : .3s;
-                    cursor             : pointer;
+                    .social__portal {
+                        width              : 30px;
+                        height             : 30px;
+                        background-repeat  : no-repeat;
+                        background-position: center;
+                        transition         : .3s;
+                        cursor             : pointer;
 
-                    &:hover {
-                        opacity: 0.8;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
-                }
 
-                .linkedin {
-                    background-image: url(/img/linkedin_social_icon.svg);
-                }
+                    .linkedin {
+                        background-image: url(/img/linkedin_social_icon.svg);
+                    }
 
-                .facebook {
-                    background-image: url(/img/facebook_social_icon.svg);
-                }
+                    .facebook {
+                        background-image: url(/img/facebook_social_icon.svg);
+                    }
 
-                .twiter {
-                    background-image: url(/img/twiter_social_icon.svg);
-                }
-            }
-        }
-
-        .footer__main {
-            display        : flex;
-            justify-content: space-between;
-            box-sizing     : border-box;
-            padding-bottom : 50px;
-            margin-top     : 96px;
-            border-bottom  : 1px solid white;
-
-            .footer__contact__descr {
-
-                h4 {
-                    display         : inline-block;
-                    padding         : 4px 8px;
-                    border-radius   : 8px;
-                    color           : $brandColor-Black;
-                    background-color: $brandColor-Green;
-                    margin-bottom   : 28px;
-                }
-
-                p {
-                    margin-bottom: 20px;
-
-                    &:last-child {
-                        margin-bottom: 0;
-
+                    .twiter {
+                        background-image: url(/img/twiter_social_icon.svg);
                     }
                 }
             }
 
-            form {
-                display         : flex;
-                align-items     : center;
-                justify-content : center;
-                gap             : 20px;
-                background-color: $brandColor-DarkGrey;
-                padding         : 0 40px;
-                border-radius   : 14px;
+            .footer__main {
+                display        : flex;
+                justify-content: space-between;
+                box-sizing     : border-box;
+                padding-bottom : 50px;
+                margin-top     : 66px;
+                border-bottom  : 1px solid white;
 
-                input,
-                button {
-                    justify-self: flex-start;
+                .footer__contact__descr {
+
+                    h4 {
+                        display         : inline-block;
+                        padding         : 4px 8px;
+                        border-radius   : 8px;
+                        color           : $brandColor-Black;
+                        background-color: $brandColor-Green;
+                        margin-bottom   : 28px;
+                    }
+
+                    p {
+                        margin-bottom: 20px;
+                        font-size    : 18px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+
+                        }
+                    }
                 }
 
-                input {
-                    width           : 285px;
-                    height          : 64px;
+                form {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    gap             : 20px;
+                    background-color: $brandColor-DarkGrey;
+                    padding         : 0 40px;
                     border-radius   : 14px;
-                    background-color: transparent;
-                    border          : 1px solid white;
-                    padding-left    : 36px;
-                    font-size       : 18px;
-                    font-family     : $brandFont-R;
-                    color           : white;
 
-                    &::placeholder {
-                        color: white;
+                    input,
+                    button {
+                        justify-self: flex-start;
                     }
-                }
 
-                button {
-                    padding         : 20px 35px;
-                    background-color: $brandColor-Green;
-                    color           : $brandColor-Black;
+                    input {
+                        width           : 285px;
+                        height          : 64px;
+                        border-radius   : 14px;
+                        background-color: transparent;
+                        border          : 1px solid white;
+                        padding-left    : 36px;
+                        font-size       : 18px;
+                        font-family     : $brandFont-R;
+                        color           : white;
 
-                    &:hover {
-                        background-color: $brandColor-Black;
-                        border          : 1px solid $brandColor-Green;
+                        &::placeholder {
+                            color: white;
+                        }
+                    }
+
+                    button {
+                        padding         : 20px 35px;
+                        background-color: $brandColor-Green;
+                        color           : $brandColor-Black;
+
+                        &:hover {
+                            background-color: $brandColor-Black;
+                            border          : 1px solid $brandColor-Green;
+                        }
                     }
                 }
             }
         }
 
         .footer__rights {
-            display  : flex;
-            gap      : 40px;
-            margin   : 50px 0;
-            font-size: 18px;
+            display            : flex;
+            gap                : 40px;
+            padding            : 50px 0;
+            font-size          : 18px;
+            color              : white;
 
             a {
                 text-decoration: underline;
@@ -1334,8 +1344,7 @@ footer {
 }
 
 
-
-
+//---------------------------------------------
 
 
 
@@ -1450,6 +1459,19 @@ footer {
     }
 }
 
+//---------------------------------------------
+
+@media (max-width: 1234px) {
+    footer {
+
+        .footer__wrapper{
+            width        : 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+//---------------------------------------------
 
 @media(max-width: 1168px) {
 
@@ -1468,6 +1490,7 @@ footer {
     }
 }
 
+//---------------------------------------------
 
 @media(max-width: 1140px) {
 
@@ -1499,8 +1522,11 @@ footer {
             }
         }
     }
+
+
 }
 
+//---------------------------------------------
 
 @media(max-width: 920px) {
 
@@ -1588,6 +1614,7 @@ footer {
     }
 }
 
+//---------------------------------------------
 
 @media(max-width: 790px) {
 
@@ -1606,6 +1633,7 @@ footer {
     }
 }
 
+//---------------------------------------------
 
 @media(max-width: 768px) {
 
@@ -1639,6 +1667,7 @@ footer {
     }
 }
 
+//---------------------------------------------
 
 @media(max-width: 528px) {
 
@@ -1714,7 +1743,7 @@ footer {
                             justify-content: center;
                         }
 
-                        textarea{
+                        textarea {
                             margin-bottom: 10px;
                         }
                     }
@@ -1731,6 +1760,7 @@ footer {
     }
 }
 
+//---------------------------------------------
 
 @media(max-width: 425px) {
 

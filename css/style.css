@@ -136,6 +136,21 @@ table {
   font-family: "Space Gratesk B";
   src: url("/fonts/SpaceGrotesk-Bold.ttf");
 }
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Space Gratesk R";
+  font-size: 20px;
+}
+body:has(.toggle__checkbox:checked) {
+  overflow: hidden;
+}
+
 h1 {
   font-size: clamp(2.25rem, 1.5147rem + 3.1373vw, 3.75rem);
   font-family: "Space Gratesk M";
@@ -161,14 +176,6 @@ p {
   font-size: clamp(0.875rem, 0.8137rem + 0.2614vw, 1rem);
   font-family: "Space Gratesk R";
   line-height: 140%;
-}
-
-body {
-  font-family: "Space Gratesk R";
-  font-size: 20px;
-}
-body:has(.toggle__checkbox:checked) {
-  overflow: hidden;
 }
 
 button {
@@ -1092,52 +1099,54 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 }
 
 footer {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
 }
-footer .footer {
+footer .footer__wrapper {
   width: 1234px;
+  background-color: rgb(25, 26, 35);
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
   padding: 55px 60px;
   padding-bottom: 0;
   box-sizing: border-box;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
-  background-color: rgb(25, 26, 35);
-  color: white;
 }
-footer .footer .footer__header {
+footer .footer__wrapper .footer {
+  color: white;
+  box-sizing: border-box;
+}
+footer .footer__wrapper .footer .footer__header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-footer .footer .footer__header .footer__logo {
+footer .footer__wrapper .footer .footer__header .footer__logo {
   background-image: url(/img/brand_logo_white.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 180px;
   height: 29px;
 }
-footer .footer .footer__header .footer__menu {
+footer .footer__wrapper .footer .footer__header .footer__menu {
   display: flex;
   gap: 40px;
 }
-footer .footer .footer__header .footer__menu li a {
+footer .footer__wrapper .footer .footer__header .footer__menu li a {
   font-size: 18px;
   color: white;
   text-decoration: underline;
   transition: 0.3s;
 }
-footer .footer .footer__header .footer__menu li a:hover {
+footer .footer__wrapper .footer .footer__header .footer__menu li a:hover {
   text-decoration: none;
   opacity: 0.8;
 }
-footer .footer .footer__header .footer__wrapper__socials {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials {
   display: flex;
   gap: 20px;
 }
-footer .footer .footer__header .footer__wrapper__socials .social__portal {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .social__portal {
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
@@ -1145,27 +1154,27 @@ footer .footer .footer__header .footer__wrapper__socials .social__portal {
   transition: 0.3s;
   cursor: pointer;
 }
-footer .footer .footer__header .footer__wrapper__socials .social__portal:hover {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .social__portal:hover {
   opacity: 0.8;
 }
-footer .footer .footer__header .footer__wrapper__socials .linkedin {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .linkedin {
   background-image: url(/img/linkedin_social_icon.svg);
 }
-footer .footer .footer__header .footer__wrapper__socials .facebook {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .facebook {
   background-image: url(/img/facebook_social_icon.svg);
 }
-footer .footer .footer__header .footer__wrapper__socials .twiter {
+footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .twiter {
   background-image: url(/img/twiter_social_icon.svg);
 }
-footer .footer .footer__main {
+footer .footer__wrapper .footer .footer__main {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   padding-bottom: 50px;
-  margin-top: 96px;
+  margin-top: 66px;
   border-bottom: 1px solid white;
 }
-footer .footer .footer__main .footer__contact__descr h4 {
+footer .footer__wrapper .footer .footer__main .footer__contact__descr h4 {
   display: inline-block;
   padding: 4px 8px;
   border-radius: 8px;
@@ -1173,13 +1182,14 @@ footer .footer .footer__main .footer__contact__descr h4 {
   background-color: rgb(185, 255, 102);
   margin-bottom: 28px;
 }
-footer .footer .footer__main .footer__contact__descr p {
+footer .footer__wrapper .footer .footer__main .footer__contact__descr p {
   margin-bottom: 20px;
+  font-size: 18px;
 }
-footer .footer .footer__main .footer__contact__descr p:last-child {
+footer .footer__wrapper .footer .footer__main .footer__contact__descr p:last-child {
   margin-bottom: 0;
 }
-footer .footer .footer__main form {
+footer .footer__wrapper .footer .footer__main form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1188,11 +1198,11 @@ footer .footer .footer__main form {
   padding: 0 40px;
   border-radius: 14px;
 }
-footer .footer .footer__main form input,
-footer .footer .footer__main form button {
+footer .footer__wrapper .footer .footer__main form input,
+footer .footer__wrapper .footer .footer__main form button {
   justify-self: flex-start;
 }
-footer .footer .footer__main form input {
+footer .footer__wrapper .footer .footer__main form input {
   width: 285px;
   height: 64px;
   border-radius: 14px;
@@ -1203,29 +1213,30 @@ footer .footer .footer__main form input {
   font-family: "Space Gratesk R";
   color: white;
 }
-footer .footer .footer__main form input::placeholder {
+footer .footer__wrapper .footer .footer__main form input::placeholder {
   color: white;
 }
-footer .footer .footer__main form button {
+footer .footer__wrapper .footer .footer__main form button {
   padding: 20px 35px;
   background-color: rgb(185, 255, 102);
   color: rgb(25, 26, 35);
 }
-footer .footer .footer__main form button:hover {
+footer .footer__wrapper .footer .footer__main form button:hover {
   background-color: rgb(25, 26, 35);
   border: 1px solid rgb(185, 255, 102);
 }
-footer .footer .footer__rights {
+footer .footer__wrapper .footer__rights {
   display: flex;
   gap: 40px;
-  margin: 50px 0;
+  padding: 50px 0;
   font-size: 18px;
+  color: white;
 }
-footer .footer .footer__rights a {
+footer .footer__wrapper .footer__rights a {
   text-decoration: underline;
   cursor: pointer;
 }
-footer .footer .footer__rights a:hover {
+footer .footer__wrapper .footer__rights a:hover {
   text-decoration: none;
   opacity: 0.8;
 }
@@ -1304,6 +1315,12 @@ footer .footer .footer__rights a:hover {
   .contact .contact__wrapper {
     width: 100%;
     padding: 0 20px;
+  }
+}
+@media (max-width: 1234px) {
+  footer .footer__wrapper {
+    width: 100%;
+    border-radius: 0;
   }
 }
 @media (max-width: 1168px) {
