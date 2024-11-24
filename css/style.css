@@ -1566,6 +1566,12 @@ footer .footer__wrapper .footer__rights a:hover {
   .services .services__wrapper .services__proposal img {
     display: none;
   }
+  .team .team__wrapper .team__cards .team__card:nth-child(5) {
+    display: none;
+  }
+  .team .team__wrapper .team__cards .team__card:nth-child(6) {
+    display: none;
+  }
   footer .footer__wrapper {
     padding-left: 20px;
     padding-right: 20px;
