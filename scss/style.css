@@ -940,7 +940,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   height: 0;
   border: 34px solid transparent;
   border-top: 32px solid rgb(25, 26, 35);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 .testimonials .testimonials__wrapper .testimonials__window .testimonials__slider .testimonial__item h4 {
   color: rgb(185, 255, 102);
