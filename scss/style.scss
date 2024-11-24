@@ -115,7 +115,9 @@ $mainWrapper-width-mobile: 100%;
     }
 }
 
+
 //---------------------------------------------
+
 
 html {
     scroll-behavior: smooth;
@@ -165,6 +167,7 @@ p {
     line-height: 140%;
 }
 
+
 button {
     padding         : 20px 76px;
     font-family     : $brandFont-R;
@@ -186,6 +189,7 @@ button {
         }
     }
 }
+
 
 //---------------------------------------------
 
@@ -346,7 +350,6 @@ header {
                     width              : 100%;
                     height             : 100vh;
                     background-color   : white;
-                    // transform       : translateX(-100%);
                     transition         : .3s;
 
                     .toggle__list {
@@ -356,7 +359,6 @@ header {
                         li {
                             margin-left: 4px;
                             transition : .6s;
-
 
                             a {
                                 text-decoration: none;
@@ -571,27 +573,27 @@ header {
                 }
 
                 &:nth-child(1) {
-                    background-image: url(/img/card_01_img.png);
+                    background-image: url(/positivus/img/card_01_img.png);
                 }
 
                 &:nth-child(2) {
-                    background-image: url(/img/card_02_img.png.png);
+                    background-image: url(/positivus/img/card_02_img.png.png);
                 }
 
                 &:nth-child(3) {
-                    background-image: url(/img/card_03_img.png.png);
+                    background-image: url(/positivus/img/card_03_img.png.png);
                 }
 
                 &:nth-child(4) {
-                    background-image: url(/img/card_04_img.png.png);
+                    background-image: url(/positivus/img/card_04_img.png.png);
                 }
 
                 &:nth-child(5) {
-                    background-image: url(/img/card_05_img.png.png);
+                    background-image: url(/positivus/img/card_05_img.png.png);
                 }
 
                 &:nth-child(6) {
-                    background-image: url(/img/card_06_img.png.png);
+                    background-image: url(/positivus/img/card_06_img.png.png);
                 }
             }
         }
@@ -893,27 +895,27 @@ header {
                     }
 
                     .profile01 {
-                        background-image: url(/img/avatar_01.png);
+                        background-image: url(/positivus/img/avatar_01.png);
                     }
 
                     .profile02 {
-                        background-image: url(/img/avatar_02.png);
+                        background-image: url(/positivus/img/avatar_02.png);
                     }
 
                     .profile03 {
-                        background-image: url(/img/avatar_03.png);
+                        background-image: url(/positivus/img/avatar_03.png);
                     }
 
                     .profile04 {
-                        background-image: url(/img/avatar_04.png);
+                        background-image: url(/positivus/img/avatar_04.png);
                     }
 
                     .profile05 {
-                        background-image: url(/img/avatar_05.png);
+                        background-image: url(/positivus/img/avatar_05.png);
                     }
 
                     .profile06 {
-                        background-image: url(/img/avatar_06.png);
+                        background-image: url(/positivus/img/avatar_06.png);
                     }
                 }
             }
@@ -1020,7 +1022,7 @@ header {
                 justify-content: space-between;
 
                 .btn__previous {
-                    background     : url(/img/slider-nav-arrow.svg) no-repeat center;
+                    background     : url(/positivus/img/slider-nav-arrow.svg) no-repeat center;
                     background-size: contain;
                     width          : 24px;
                     transform      : rotate(180deg);
@@ -1032,7 +1034,7 @@ header {
                     gap            : 20px;
 
                     .item__slider__position {
-                        background     : url(/img/slider-item.svg) no-repeat center;
+                        background     : url(/positivus/img/slider-item.svg) no-repeat center;
                         background-size: contain;
                         width          : 14px;
 
@@ -1050,12 +1052,12 @@ header {
                     }
 
                     .position--selected {
-                        background: url(/img/slider-item-selected.svg) no-repeat center;
+                        background: url(/positivus/img/slider-item-selected.svg) no-repeat center;
                     }
                 }
 
                 .btn__next {
-                    background     : url(/img/slider-nav-arrow.svg) no-repeat center;
+                    background     : url(/positivus/img/slider-nav-arrow.svg) no-repeat center;
                     background-size: contain;
                     width          : 24px;
 
@@ -1089,7 +1091,7 @@ header {
         .contact__form {
             background-color   : $brandColor-LightGrey;
             border-radius      : 45px;
-            background-image   : url(/img/Illustration_02.svg);
+            background-image   : url(/positivus/img/Illustration_02.svg);
             background-repeat  : no-repeat;
             background-position: right;
             transition         : .3s;
@@ -1216,7 +1218,7 @@ footer {
                 align-items    : center;
 
                 .footer__logo {
-                    background-image   : url(/img/brand_logo_white.svg);
+                    background-image   : url(/positivus/img/brand_logo_white.svg);
                     background-repeat  : no-repeat;
                     background-position: center;
                     width              : 180px;
@@ -1261,15 +1263,15 @@ footer {
                     }
 
                     .linkedin {
-                        background-image: url(/img/linkedin_social_icon.svg);
+                        background-image: url(/positivus/img/linkedin_social_icon.svg);
                     }
 
                     .facebook {
-                        background-image: url(/img/facebook_social_icon.svg);
+                        background-image: url(/positivus/img/facebook_social_icon.svg);
                     }
 
                     .twiter {
-                        background-image: url(/img/twiter_social_icon.svg);
+                        background-image: url(/positivus/img/twiter_social_icon.svg);
                     }
                 }
             }
@@ -1510,8 +1512,6 @@ footer {
 
     .team {
         .team__wrapper {
-            /* @include mobile-wrapper; */
-
             .team__cards {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1577,8 +1577,6 @@ footer {
             }
         }
     }
-
-
 }
 
 //---------------------------------------------

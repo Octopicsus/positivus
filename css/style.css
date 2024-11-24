@@ -118,23 +118,23 @@ table {
 
 @font-face {
   font-family: "Space Gratesk L";
-  src: url("/fonts/SpaceGrotesk-Light.ttf");
+  src: url("/positivus/fonts/SpaceGrotesk-Light.ttf");
 }
 @font-face {
   font-family: "Space Gratesk R";
-  src: url("/fonts/SpaceGrotesk-Regular.ttf");
+  src: url("/positivus/fonts/SpaceGrotesk-Regular.ttf");
 }
 @font-face {
   font-family: "Space Gratesk M";
-  src: url("/fonts/SpaceGrotesk-Medium.ttf");
+  src: url("/positivus/fonts/SpaceGrotesk-Medium.ttf");
 }
 @font-face {
   font-family: "Space Gratesk SB";
-  src: url("/fonts/SpaceGrotesk-SemiBold.ttf");
+  src: url("/positivus/fonts/SpaceGrotesk-SemiBold.ttf");
 }
 @font-face {
   font-family: "Space Gratesk B";
-  src: url("/fonts/SpaceGrotesk-Bold.ttf");
+  src: url("/positivus/fonts/SpaceGrotesk-Bold.ttf");
 }
 html {
   scroll-behavior: smooth;
@@ -534,22 +534,22 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   background-color: white;
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(1) {
-  background-image: url(/img/card_01_img.png);
+  background-image: url(/positivus/img/card_01_img.png);
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(2) {
-  background-image: url(/img/card_02_img.png.png);
+  background-image: url(/positivus/img/card_02_img.png.png);
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(3) {
-  background-image: url(/img/card_03_img.png.png);
+  background-image: url(/positivus/img/card_03_img.png.png);
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(4) {
-  background-image: url(/img/card_04_img.png.png);
+  background-image: url(/positivus/img/card_04_img.png.png);
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(5) {
-  background-image: url(/img/card_05_img.png.png);
+  background-image: url(/positivus/img/card_05_img.png.png);
 }
 .services .services__wrapper .services__cards__wrapper .services__card:nth-child(6) {
-  background-image: url(/img/card_06_img.png.png);
+  background-image: url(/positivus/img/card_06_img.png.png);
 }
 .services .services__wrapper .services__proposal {
   position: relative;
@@ -842,22 +842,22 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   white-space: nowrap;
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile01 {
-  background-image: url(/img/avatar_01.png);
+  background-image: url(/positivus/img/avatar_01.png);
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile02 {
-  background-image: url(/img/avatar_02.png);
+  background-image: url(/positivus/img/avatar_02.png);
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile03 {
-  background-image: url(/img/avatar_03.png);
+  background-image: url(/positivus/img/avatar_03.png);
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile04 {
-  background-image: url(/img/avatar_04.png);
+  background-image: url(/positivus/img/avatar_04.png);
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile05 {
-  background-image: url(/img/avatar_05.png);
+  background-image: url(/positivus/img/avatar_05.png);
 }
 .team .team__wrapper .team__cards .team__card .team__card__title .profile06 {
-  background-image: url(/img/avatar_06.png);
+  background-image: url(/positivus/img/avatar_06.png);
 }
 .team .team__wrapper button {
   justify-self: end;
@@ -961,7 +961,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   justify-content: space-between;
 }
 .testimonials .testimonials__wrapper .testimonials__window .navigation__slider__wrapper .btn__previous {
-  background: url(/img/slider-nav-arrow.svg) no-repeat center;
+  background: url(/positivus/img/slider-nav-arrow.svg) no-repeat center;
   background-size: contain;
   width: 24px;
   transform: rotate(180deg);
@@ -972,7 +972,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   gap: 20px;
 }
 .testimonials .testimonials__wrapper .testimonials__window .navigation__slider__wrapper .navigation__slider__position .item__slider__position {
-  background: url(/img/slider-item.svg) no-repeat center;
+  background: url(/positivus/img/slider-item.svg) no-repeat center;
   background-size: contain;
   width: 14px;
 }
@@ -987,10 +987,10 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   scale: 1;
 }
 .testimonials .testimonials__wrapper .testimonials__window .navigation__slider__wrapper .navigation__slider__position .position--selected {
-  background: url(/img/slider-item-selected.svg) no-repeat center;
+  background: url(/positivus/img/slider-item-selected.svg) no-repeat center;
 }
 .testimonials .testimonials__wrapper .testimonials__window .navigation__slider__wrapper .btn__next {
-  background: url(/img/slider-nav-arrow.svg) no-repeat center;
+  background: url(/positivus/img/slider-nav-arrow.svg) no-repeat center;
   background-size: contain;
   width: 24px;
 }
@@ -1032,7 +1032,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .contact .contact__wrapper .contact__form {
   background-color: rgb(243, 243, 243);
   border-radius: 45px;
-  background-image: url(/img/Illustration_02.svg);
+  background-image: url(/positivus/img/Illustration_02.svg);
   background-repeat: no-repeat;
   background-position: right;
   transition: 0.3s;
@@ -1143,7 +1143,7 @@ footer .footer__wrapper .footer .footer__header {
   align-items: center;
 }
 footer .footer__wrapper .footer .footer__header .footer__logo {
-  background-image: url(/img/brand_logo_white.svg);
+  background-image: url(/positivus/img/brand_logo_white.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 180px;
@@ -1179,13 +1179,13 @@ footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .socia
   opacity: 0.8;
 }
 footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .linkedin {
-  background-image: url(/img/linkedin_social_icon.svg);
+  background-image: url(/positivus/img/linkedin_social_icon.svg);
 }
 footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .facebook {
-  background-image: url(/img/facebook_social_icon.svg);
+  background-image: url(/positivus/img/facebook_social_icon.svg);
 }
 footer .footer__wrapper .footer .footer__header .footer__wrapper__socials .twiter {
-  background-image: url(/img/twiter_social_icon.svg);
+  background-image: url(/positivus/img/twiter_social_icon.svg);
 }
 footer .footer__wrapper .footer .footer__main {
   display: flex;
@@ -1356,9 +1356,6 @@ footer .footer__wrapper .footer__rights a:hover {
   }
 }
 @media (max-width: 1168px) {
-  .team .team__wrapper {
-    /* @include mobile-wrapper; */
-  }
   .team .team__wrapper .team__cards {
     grid-template-columns: repeat(2, 1fr);
   }
