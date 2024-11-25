@@ -1331,9 +1331,24 @@ footer {
                         font-family     : $brandFont-R;
                         color           : white;
                         box-sizing      : border-box;
+                        animation       : pulse 3s infinite;
 
                         &::placeholder {
                             color: white;
+
+                            @keyframes pulse {
+                                0% {
+                                    border: 1px solid rgba(255, 255, 255, 0.4);
+                                }
+
+                                25% {
+                                    border: 1px solid white;
+                                }
+
+                                100% {
+                                    border:1px solid rgba(255, 255, 255, 0.4);
+                                }
+                            }
                         }
                     }
 
