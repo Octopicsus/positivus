@@ -3,6 +3,9 @@
 ### Open project: 
 https://octopicsus.github.io/positivus/
 
+### Web view:
+![Design view](/img/webview.png)
+
 ## Project Description
 This project is an adaptive web page created using modern web development technologies. The work focused on using tools to simplify layout, styling, and adding animations to make the page user-friendly and functional.
 
