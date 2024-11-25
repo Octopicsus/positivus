@@ -1335,15 +1335,18 @@ footer {
 
                         @keyframes pulse {
                             0% {
-                                border: 1px solid rgba(255, 255, 255, 0.4);
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                outline: 1px solid transparent;
                             }
 
-                            25% {
-                                border: 3px solid white;
+                            50% {
+                                border: 2px solid white;
+                                outline: 1px solid white;
                             }
 
                             100% {
-                                border: 1px solid rgba(255, 255, 255, 0.4);
+                                border:1px solid rgba(255, 255, 255, 0.2);
+                                outline: 1px solid transparent;
                             }
                         }
 
