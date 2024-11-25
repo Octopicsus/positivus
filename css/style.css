@@ -1237,9 +1237,21 @@ footer .footer__wrapper .footer .footer__main form input {
   font-family: "Space Gratesk R";
   color: white;
   box-sizing: border-box;
+  animation: pulse 3s infinite;
 }
 footer .footer__wrapper .footer .footer__main form input::placeholder {
   color: white;
+}
+@keyframes pulse {
+  0% {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    border: 1px solid white;
+  }
+  100% {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
 }
 footer .footer__wrapper .footer .footer__main form button {
   padding: 20px 35px;
