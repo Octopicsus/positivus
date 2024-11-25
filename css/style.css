@@ -1256,6 +1256,10 @@ footer .footer__wrapper .footer .footer__main form input {
 footer .footer__wrapper .footer .footer__main form input::placeholder {
   color: white;
 }
+footer .footer__wrapper .footer .footer__main form input:focus {
+  color: rgb(185, 255, 102);
+  animation: none;
+}
 footer .footer__wrapper .footer .footer__main form button {
   padding: 20px 35px;
   background-color: rgb(185, 255, 102);
