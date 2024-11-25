@@ -25,3 +25,6 @@ This project is an adaptive web page created using modern web development techno
 1. Clone the repository:
    ```bash
    git clone https://github.com/Octopicus/positivus.git
+
+### Project Design:
+Figma UI/UX Design Project: [Figma Link](https://www.figma.com/design/4mANucSINr9mr5z3uZsalf/Positivus-Landing-Page-Design-(Community)?node-id=25-145&t=pGicNCfwYnltGbIU-1)
