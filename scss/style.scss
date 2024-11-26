@@ -830,7 +830,7 @@ header {
 
 .team {
     @include flex-center;
-    margin-bottom: 100px;
+    margin-bottom: clamp(3.125rem, 6.536vw + 1.593rem, 6.25rem);
 
     .team__wrapper {
         display   : grid;

@@ -770,7 +770,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: clamp(3.125rem, 6.536vw + 1.593rem, 6.25rem);
 }
 .team .team__wrapper {
   display: grid;
