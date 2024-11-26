@@ -775,7 +775,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
 .team .team__wrapper {
   display: grid;
   width: 1234px;
-  margin-top: 140px;
+  margin-top: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 }
 .team .team__wrapper .team__title {
   display: flex;
@@ -867,7 +867,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+  margin-bottom: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 }
 .testimonials .testimonials__wrapper {
   width: 1234px;
@@ -1007,7 +1007,7 @@ header .header__wrapper nav .toggle__menu .header__menu--toggle .toggle__list li
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 140px;
+  margin-bottom: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 }
 .contact .contact__wrapper {
   width: 1234px;

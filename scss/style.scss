@@ -835,7 +835,7 @@ header {
     .team__wrapper {
         display   : grid;
         width     : $mainWrapper-width-web;
-        margin-top: 140px;
+        margin-top: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 
         .team__title {
             @include title-layout;
@@ -930,7 +930,7 @@ header {
 
 .testimonials {
     @include flex-center;
-    margin-bottom: 140px;
+    margin-bottom: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 
     .testimonials__wrapper {
         width   : $mainWrapper-width-web;
@@ -1079,7 +1079,7 @@ header {
 
 .contact {
     @include flex-center;
-    margin-bottom: 140px;
+    margin-bottom: clamp(3.125rem, 11.765vw + 0.368rem, 8.75rem);
 
     .contact__wrapper {
         width: $mainWrapper-width-web;
@@ -1359,6 +1359,7 @@ footer {
                             color: $brandColor-Green;
                             animation: none;
                         }
+                        
                     }
 
                     button {
@@ -2026,4 +2027,4 @@ footer {
             }
         }
     }
-}
+}  
