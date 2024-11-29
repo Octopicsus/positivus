@@ -1761,15 +1761,11 @@ footer {
 
             .services__proposal {
                 .services__proposal__title {
-                    .btn__long {
+                    button{
                         width: 100%;
                     }
-
-                    .btn__short {
-                        width: 100%;
-                    } 
                 }
-
+ 
                 img {
                     display: none;
                 }

@@ -1582,10 +1582,7 @@ footer .footer__wrapper .footer__rights a:hover {
     background-size: 150px;
     background-position: 80% 72%;
   }
-  .services .services__wrapper .services__proposal .services__proposal__title .btn__long {
-    width: 100%;
-  }
-  .services .services__wrapper .services__proposal .services__proposal__title .btn__short {
+  .services .services__wrapper .services__proposal .services__proposal__title button {
     width: 100%;
   }
   .services .services__wrapper .services__proposal img {
